@@ -68,12 +68,9 @@ The agent must never crowd out other people's CI. The following actions start a 
 
 Marking a PR ready, closing a PR, and commenting do not start CI.
 
-Before any action that starts CI:
+Before any action that starts CI, count your PRs with CI running. That means PRs with any required check still pending, or with workflow runs waiting for a maintainer's approval. At most three are allowed at a time, including any that this run has started. Only your own PRs count; ignore the rest of the repository's CI.
 
-1. **Count your PRs with CI running.** That means PRs with any required check still pending, or with workflow runs waiting for a maintainer's approval. At most three are allowed at a time, including any that this run has started.
-2. **Check how busy CI is:** `gh api "repos/discourse/discourse/actions/runs?status=queued&per_page=1" --jq .total_count`. If more than 15 runs are queued, start nothing except `alerts` work.
-
-If any check says no, skip the action and record nothing. The next run works out the same action again.
+If three are already running, skip the action and record nothing. The next run works out the same action again.
 
 PRs are checked with `alerts` first, and new PRs are opened last. That gives the budget to the most important work first: `alerts`, then fixing a red draft, then a replacement, then a new `batch` PR, then `single` PRs.
 
@@ -225,7 +222,5 @@ While an `alerts` PR is still a draft, add newly flagged updates to it and rebui
 - **Account:** `discourse-dep-bot`.
 - **Fork:** `discourse-dep-bot/discourse`, with this skill and the state on its `dep-bot` branch.
 - **PR branch prefix:** `deps/`, on the fork.
-- **CI budget:**
-  - at most three of your PRs with CI running at once;
-  - start nothing except `alerts` work while more than 15 runs are queued.
+- **CI budget:** at most three of your PRs with CI running at once.
 - **GitHub Actions updates:** pushing a change to `.github/workflows` needs a token with `workflow` scope. If the push is refused, leave the GitHub Actions updates out of the PR.

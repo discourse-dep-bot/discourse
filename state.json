@@ -401,7 +401,7 @@
       "kind": "single",
       "branch": "deps/atlaskit-pragmatic-drag-and-drop-4.0.0",
       "base_sha": "aa2c31be7dd2fec4c6c77cb8008117a8592d274c",
-      "head_sha": "77935c4e9be85a671e050c4cc6c121cb4ece7853",
+      "head_sha": "9a04fb6717739c290f5adfa8c5c5d1cedf16103a",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -428,9 +428,9 @@
       ],
       "fixes": [],
       "ci": {
-        "head_sha": "77935c4e9be85a671e050c4cc6c121cb4ece7853",
+        "head_sha": "9a04fb6717739c290f5adfa8c5c5d1cedf16103a",
         "result": null,
-        "retries": 1,
+        "retries": 2,
         "failing": []
       },
       "bisect": null,

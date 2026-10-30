@@ -4,7 +4,84 @@
     "run_id": "2026-10-30T16:51:54Z",
     "expires_at": "2026-10-30T18:51:54Z"
   },
-  "prs": [],
+  "prs": [
+    {
+      "number": 45404,
+      "kind": "alerts",
+      "branch": "deps/alerts-20261030-1657",
+      "base_sha": "2af99ad994eca01bd6585ea7850fa498be10fac1",
+      "head_sha": "f9a684757d9d2059a3e63c32be18363c693d5799",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-10-30T17:03:17Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "body-parser",
+          "from": "2.3.0",
+          "to": "2.4.0"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "colord",
+          "from": "2.9.3",
+          "to": "2.10.0"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "fast-uri",
+          "from": "3.1.7",
+          "to": "3.1.9"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "follow-redirects",
+          "from": "1.16.0",
+          "to": "1.16.1"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "ip-address",
+          "from": "10.7.3",
+          "to": "10.7.4"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "markdown-it",
+          "from": "15.0.2",
+          "to": "15.0.3",
+          "manifests": [
+            "frontend/discourse-markdown-it/package.json",
+            "frontend/pretty-text-processor/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "markdown-it",
+          "from": "14.3.2",
+          "to": "14.3.3"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "qs",
+          "from": "6.16.0",
+          "to": "6.16.1"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "undici",
+          "from": "6.29.0",
+          "to": "6.29.1"
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-10-30T17:03:17Z"
+    }
+  ],
   "held": [],
   "handed_over": []
 }

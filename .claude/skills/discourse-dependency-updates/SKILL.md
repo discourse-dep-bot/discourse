@@ -9,7 +9,7 @@ The agent owns dependency updates for Discourse core, up to the point where a PR
 
 It runs as the `discourse-dep-bot` GitHub account, which cannot push to discourse/discourse. It pushes branches to its fork, `discourse-dep-bot/discourse`, and opens PRs from there.
 
-It runs on a schedule, about once an hour, each time in a fresh environment. Everything it must remember between runs is on the fork's `dep-bot` branch, along with this skill (see `references/state.md`). That branch's `README.md` is a generated status page for people.
+It runs every 15 minutes, each time in a fresh environment. Everything it must remember between runs is on the fork's `dep-bot` branch, along with this skill (see `references/state.md`). That branch's `README.md` is a generated status page for people.
 
 It keeps these PRs going:
 

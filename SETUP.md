@@ -16,13 +16,13 @@
 
 ## Running it
 
-Run it about once an hour, in a fresh environment with Ruby, Bundler, Node, pnpm, git, `gh` and the bot's credentials:
+`bin/run-loop` runs the bot every 15 minutes, each time in a fresh directory, until it is stopped. It needs git, `gh`, `claude`, Ruby with Bundler, and Node with pnpm, and a file holding the bot's token:
 
 ```bash
-git clone --single-branch --branch dep-bot https://github.com/discourse-dep-bot/discourse bot
-cd bot
-claude -p "Do this hour's dependency run with the discourse-dependency-updates skill."
+bin/run-loop /path/to/token.txt
 ```
+
+Each run clones this branch into a temporary directory and starts `claude -p` there, so the agent finds the skill. The token is passed through the environment only, and commits are made as `discourse-dep-bot`. Each run's output goes to `~/.local/state/dep-bot/`.
 
 Runs that overlap are safe. A run that finds another one in progress stops at once.
 

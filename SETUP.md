@@ -18,7 +18,7 @@
 `bin/run-loop` runs the bot every 15 minutes, each time in a fresh directory, until it is stopped. It needs:
 
 - git, `gh` and `claude`;
-- the Ruby version that discourse/discourse's `Gemfile` asks for (Ruby 4.0 since October 2026), with Bundler;
+- Ruby with Bundler;
 - Node with pnpm;
 - a file holding the bot's token.
 

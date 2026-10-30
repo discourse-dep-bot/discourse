@@ -39,8 +39,8 @@ end
 
 def read_state
   parent = fetch_state_branch
-  return JSON.pretty_generate(EMPTY_STATE) unless parent
-  git("show", "#{parent}:state.json")
+  (parent && git("show", "#{parent}:state.json", allow_failure: true)) ||
+    JSON.pretty_generate(EMPTY_STATE)
 end
 
 def cell(text) = text.to_s.gsub("|", "\\|").gsub(/\s*\n\s*/, " ")

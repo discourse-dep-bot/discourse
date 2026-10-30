@@ -1,0 +1,7 @@
+interface:
+  display_name: "Discourse Dependency Updates"
+  short_description: "Batch, review and verify dependency updates"
+  default_prompt: "Use $discourse-dependency-updates to prepare the next batch of dependency updates for Discourse."
+
+policy:
+  allow_implicit_invocation: true

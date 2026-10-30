@@ -29,7 +29,15 @@ A run is in progress. Its lease expires at 2026-10-30T18:51:54Z.
 
 ## Held
 
-None.
+| Package | Versions | Reason | Since | Recheck after |
+| --- | --- | --- | --- | --- |
+| `@glint/ember-tsc` (npm) | <= 1.14.2 | Newer versions bring in @volar/* 2.4.30, which needs typescript below 7, and Discourse uses typescript 7.1. pnpm fails with an unmet peer dependency. | 2026-10-30 | 2026-11-30 |
+| `@glint/template` (npm) | <= 1.11.0 | Newer versions bring in @volar/* 2.4.30, which needs typescript below 7, and Discourse uses typescript 7.1. pnpm fails with an unmet peer dependency. | 2026-10-30 | 2026-11-30 |
+| `@glint/tsserver-plugin` (npm) | <= 2.7.15 | Newer versions bring in @volar/* 2.4.30, which needs typescript below 7, and Discourse uses typescript 7.1. pnpm fails with an unmet peer dependency. | 2026-10-30 | 2026-11-30 |
+| `eslint` (npm) | > 10.6.0 | @discourse/lint-configs 3.9.1 needs exactly eslint 10.6.0, prettier 3.8.1 and stylelint 17.5.0 as peers, so these move when lint-configs does. | 2026-10-30 | 2026-11-30 |
+| `prettier` (npm) | > 3.8.1 | @discourse/lint-configs 3.9.1 needs exactly eslint 10.6.0, prettier 3.8.1 and stylelint 17.5.0 as peers, so these move when lint-configs does. | 2026-10-30 | 2026-11-30 |
+| `stylelint` (npm) | > 17.5.0 | @discourse/lint-configs 3.9.1 needs exactly eslint 10.6.0, prettier 3.8.1 and stylelint 17.5.0 as peers, so these move when lint-configs does. | 2026-10-30 | 2026-11-30 |
+| `vitest` (npm) | >= 5.0.5 | vite is a peer of vitest and no package.json declares it, so updating vitest drops vite from the lockfile. Wait until #45405 declares vite. | 2026-10-30 | 2026-11-13 |
 
 ## Latest activity
 

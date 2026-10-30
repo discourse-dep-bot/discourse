@@ -110,6 +110,63 @@
       "opened_at": "2026-10-30T17:09:23Z"
     }
   ],
-  "held": [],
+  "held": [
+    {
+      "ecosystem": "npm",
+      "name": "@glint/ember-tsc",
+      "versions": "<= 1.14.2",
+      "reason": "Newer versions bring in @volar/* 2.4.30, which needs typescript below 7, and Discourse uses typescript 7.1. pnpm fails with an unmet peer dependency.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-30"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@glint/template",
+      "versions": "<= 1.11.0",
+      "reason": "Newer versions bring in @volar/* 2.4.30, which needs typescript below 7, and Discourse uses typescript 7.1. pnpm fails with an unmet peer dependency.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-30"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@glint/tsserver-plugin",
+      "versions": "<= 2.7.15",
+      "reason": "Newer versions bring in @volar/* 2.4.30, which needs typescript below 7, and Discourse uses typescript 7.1. pnpm fails with an unmet peer dependency.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-30"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "eslint",
+      "versions": "> 10.6.0",
+      "reason": "@discourse/lint-configs 3.9.1 needs exactly eslint 10.6.0, prettier 3.8.1 and stylelint 17.5.0 as peers, so these move when lint-configs does.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-30"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "prettier",
+      "versions": "> 3.8.1",
+      "reason": "@discourse/lint-configs 3.9.1 needs exactly eslint 10.6.0, prettier 3.8.1 and stylelint 17.5.0 as peers, so these move when lint-configs does.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-30"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "stylelint",
+      "versions": "> 17.5.0",
+      "reason": "@discourse/lint-configs 3.9.1 needs exactly eslint 10.6.0, prettier 3.8.1 and stylelint 17.5.0 as peers, so these move when lint-configs does.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-30"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "vitest",
+      "versions": ">= 5.0.5",
+      "reason": "vite is a peer of vitest and no package.json declares it, so updating vitest drops vite from the lockfile. Wait until #45405 declares vite.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-13"
+    }
+  ],
   "handed_over": []
 }

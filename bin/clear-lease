@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Clears the lease in the bot's state. Use it after stopping a run part-way,
+# which can leave the lease held for up to two hours.
+#
+# Usage: bin/clear-lease TOKEN_FILE
+set -euo pipefail
+
+source "$(dirname "$0")/bot-env" "${1:?Usage: bin/clear-lease TOKEN_FILE}"
+
+dir="$(mktemp -d)"
+trap 'rm -rf "$dir"' EXIT
+git clone --quiet --single-branch --branch dep-bot "$bot_fork" "$dir/bot"
+cd "$dir/bot"
+
+state_rb=".claude/skills/discourse-dependency-updates/scripts/state.rb"
+ruby "$state_rb" read > "$dir/state.json"
+ruby -rjson -e '
+  state = JSON.parse(File.read(ARGV[0]))
+  puts "Lease was: #{state["lease"].inspect}"
+  state["lease"] = nil
+  File.write(ARGV[0], JSON.pretty_generate(state))
+' "$dir/state.json"
+ruby "$state_rb" write "$dir/state.json" --log "Cleared the lease by hand."
+echo "Lease cleared."

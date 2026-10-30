@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Turns claude's stream-json output into readable lines: what the agent says,
+# the tools it calls, and a summary when the run ends.
+
+require "json"
+
+$stdout.sync = true
+
+def say(text)
+  stamp = Time.now.utc.strftime("%H:%M:%S")
+  text.to_s.each_line { |line| puts "#{stamp} #{line.chomp}" }
+end
+
+def tool_detail(input)
+  detail = input["command"] || input["file_path"] || input["pattern"] || input["description"] || ""
+  first, *rest = detail.to_s.lines
+  rest.empty? ? first.to_s.chomp : "#{first.chomp} …"
+end
+
+$stdin.each_line do |line|
+  event =
+    begin
+      JSON.parse(line)
+    rescue JSON::ParserError
+      say(line)
+      next
+    end
+
+  case event["type"]
+  when "assistant"
+    (event.dig("message", "content") || []).each do |part|
+      case part["type"]
+      when "text"
+        say(part["text"])
+      when "tool_use"
+        say("> #{part["name"]} #{tool_detail(part["input"] || {})}".rstrip)
+      end
+    end
+  when "result"
+    seconds = event["duration_ms"].to_i / 1000
+    say(
+      "Run #{event["subtype"]}: #{event["num_turns"]} turns, #{seconds}s, $#{event["total_cost_usd"]}",
+    )
+  end
+end

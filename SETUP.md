@@ -15,15 +15,26 @@
 
 ## Running it
 
-`bin/run-loop` runs the bot every 15 minutes, each time in a fresh directory, until it is stopped. It needs git, `gh`, `claude`, Ruby with Bundler, and Node with pnpm, and a file holding the bot's token:
+`bin/run-loop` runs the bot every 15 minutes, each time in a fresh directory, until it is stopped. It needs:
+
+- git, `gh` and `claude`;
+- the Ruby version that discourse/discourse's `Gemfile` asks for (Ruby 4.0 since October 2026), with Bundler;
+- Node with pnpm;
+- a file holding the bot's token.
 
 ```bash
 bin/run-loop /path/to/token.txt
 ```
 
-Each run clones this branch into a temporary directory and starts `claude -p` there, so the agent finds the skill. The token is passed through the environment only, and commits are made as `discourse-dep-bot`. Each run's output goes to `~/.local/state/dep-bot/`.
+Each run clones this branch into a temporary directory and starts `claude -p` there, so the agent finds the skill. The token is passed through the environment only, and commits are made as `discourse-dep-bot`. What the agent says and each command it runs are printed to the terminal as it goes.
 
 Runs that overlap are safe. A run that finds another one in progress stops at once.
+
+Stopping the loop part-way through a run can leave the run's lease in the state, which blocks later runs for up to two hours. Clear it with:
+
+```bash
+bin/clear-lease /path/to/token.txt
+```
 
 ## Steering it
 

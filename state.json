@@ -479,9 +479,9 @@
       "branch": "deps/ember-source-7.3.1",
       "base_sha": "aa2c31be7dd2fec4c6c77cb8008117a8592d274c",
       "head_sha": "c3f069d74c725025e789b66eaf9a03b09a7f9df7",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-10-30T19:42:57Z",
       "comments_seen_at": "2026-10-30T19:31:42Z",
       "updates": [
         {
@@ -497,7 +497,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "c3f069d74c725025e789b66eaf9a03b09a7f9df7",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-10-30T19:31:42Z"

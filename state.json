@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-10-30T17:17:07Z",
-    "expires_at": "2026-10-30T19:17:07Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 45404,
@@ -14,7 +11,7 @@
       "status": "draft",
       "replaces": null,
       "ready_at": null,
-      "comments_seen_at": "2026-10-30T17:03:17Z",
+      "comments_seen_at": "2026-10-30T17:03:24Z",
       "updates": [
         {
           "ecosystem": "npm",

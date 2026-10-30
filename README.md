@@ -11,6 +11,7 @@ A run is in progress. Its lease expires at 2026-10-30T21:31:32Z.
 | [#45406](https://github.com/discourse/discourse/pull/45406) | batch | ready | green | 46 |  |
 | [#45411](https://github.com/discourse/discourse/pull/45411) | single | draft | running | 2 |  |
 | [#45414](https://github.com/discourse/discourse/pull/45414) | single | ready | green | 1 |  |
+| [#45416](https://github.com/discourse/discourse/pull/45416) | single | draft | running | 1 |  |
 
 ### [#45406](https://github.com/discourse/discourse/pull/45406) batch
 
@@ -69,6 +70,10 @@ A run is in progress. Its lease expires at 2026-10-30T21:31:32Z.
 ### [#45414](https://github.com/discourse/discourse/pull/45414) single
 
 - `omniauth-facebook` 10.0.0 → 11.0.0 (gem)
+
+### [#45416](https://github.com/discourse/discourse/pull/45416) single
+
+- `ember-source` 7.3.0 → 7.3.1 (npm)
 
 ## Held
 

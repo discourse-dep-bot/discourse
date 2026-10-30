@@ -10,6 +10,7 @@ A run is in progress. Its lease expires at 2026-10-30T20:57:24Z.
 | --- | --- | --- | --- | --- | --- |
 | [#45406](https://github.com/discourse/discourse/pull/45406) | batch | draft | running | 46 |  |
 | [#45411](https://github.com/discourse/discourse/pull/45411) | single | draft | running | 2 |  |
+| [#45414](https://github.com/discourse/discourse/pull/45414) | single | draft | running | 1 |  |
 
 ### [#45406](https://github.com/discourse/discourse/pull/45406) batch
 
@@ -64,6 +65,10 @@ A run is in progress. Its lease expires at 2026-10-30T20:57:24Z.
 
 - `@atlaskit/pragmatic-drag-and-drop` 3.1.0 → 4.0.0 (npm)
 - `@atlaskit/pragmatic-drag-and-drop-auto-scroll` 3.2.0 → 3.2.1 (npm)
+
+### [#45414](https://github.com/discourse/discourse/pull/45414) single
+
+- `omniauth-facebook` 10.0.0 → 11.0.0 (gem)
 
 ## Held
 

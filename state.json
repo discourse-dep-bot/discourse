@@ -11,9 +11,9 @@
       "branch": "deps/batch-20261030-1706",
       "base_sha": "aa2c31be7dd2fec4c6c77cb8008117a8592d274c",
       "head_sha": "008ca15a3dd4b75fb2b969da92f0d13685e3f2ea",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-10-30T19:27:57Z",
       "comments_seen_at": "2026-10-30T17:15:47Z",
       "updates": [
         {
@@ -391,7 +391,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "008ca15a3dd4b75fb2b969da92f0d13685e3f2ea",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-10-30T17:15:47Z"
@@ -443,9 +448,9 @@
       "branch": "deps/omniauth-facebook-11.0.0",
       "base_sha": "aa2c31be7dd2fec4c6c77cb8008117a8592d274c",
       "head_sha": "82aa6e34cc502d5f782046640e3761976fb8fd74",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-10-30T19:27:57Z",
       "comments_seen_at": "2026-10-30T19:06:17Z",
       "updates": [
         {
@@ -458,7 +463,12 @@
       "fixes": [
         "82aa6e34cc502d5f782046640e3761976fb8fd74"
       ],
-      "ci": null,
+      "ci": {
+        "head_sha": "82aa6e34cc502d5f782046640e3761976fb8fd74",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-10-30T19:06:17Z"

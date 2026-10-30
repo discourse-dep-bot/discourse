@@ -17,10 +17,10 @@ $SKILL/scripts/release_ages.rb gem:excon gem:rubyzip   # gem release ages
 
 # Known advisories
 pnpm audit
-bundle exec bundle-audit check --update
+"$(ruby -e 'print Gem.user_dir')/bin/bundle-audit" check --update
 ```
 
-`pnpm audit` checks `pnpm-lock.yaml` against the npm registry's advisory database. `bundle-audit` checks `Gemfile.lock` against the public ruby-advisory-db. Neither needs access to the repository's security settings.
+`pnpm audit` checks `pnpm-lock.yaml` against the npm registry's advisory database. `bundle-audit` checks `Gemfile.lock` against the public ruby-advisory-db. It is not in the Gemfile, so the setup step installs it for the user. Neither needs access to the repository's security settings.
 
 For a flagged package that is only transitive, `pnpm why -r <pkg>` or `Gemfile.lock` shows what pulls it in. Update it with `pnpm update -r <pkg> --lockfile-only` or `bundle lock --conservative --update <gem>`. If the parent's range does not allow the patched version, update the parent.
 

@@ -12,7 +12,6 @@
 3. **Push this branch** to the fork as `dep-bot`, and make it the fork's default branch, so that the fork's front page shows the status.
 4. **Give the bot a token** that can push to its fork and open, comment on and close PRs on discourse/discourse. The token also needs the `workflow` scope, or the bot leaves GitHub Actions updates out of its PRs.
 5. **Let its CI run.** discourse/discourse asks a maintainer to approve workflow runs for PRs from outside contributors. Until the bot no longer needs approval, someone has to click "Approve and run" on its PRs. The bot escalates on a PR that has waited more than a day.
-6. **Add `bundler-audit`** to the development group of discourse/discourse's `Gemfile`. The bot runs `bundle exec bundle-audit`.
 
 ## Running it
 

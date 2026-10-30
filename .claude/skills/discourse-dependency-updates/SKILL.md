@@ -45,6 +45,7 @@ It keeps these PRs going:
    export SKILL="$PWD/.claude/skills/discourse-dependency-updates"
    gh auth status
    (cd ../work && bundle install && pnpm install)
+   gem install --user-install --no-document bundler-audit
    ```
 
    Run `$SKILL/scripts/state.rb` from `bot/`. Do all dependency work in `../work`. `GH_REPO` points every `gh` command at discourse/discourse.

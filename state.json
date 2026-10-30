@@ -6,39 +6,6 @@
   },
   "prs": [
     {
-      "number": 45405,
-      "kind": "single",
-      "branch": "deps/vite-8.2.4",
-      "base_sha": "5bb0757acc6f69c8aaabee27f1d75e3112e0b315",
-      "head_sha": "e89a2ff921e4495a36fbe93ff0786bfb71c7b1f5",
-      "status": "ready",
-      "replaces": null,
-      "ready_at": "2026-10-30T19:00:19Z",
-      "comments_seen_at": "2026-10-30T17:42:36Z",
-      "updates": [
-        {
-          "ecosystem": "npm",
-          "name": "vite",
-          "from": "8.2.2",
-          "to": "8.2.4",
-          "manifests": [
-            "frontend/discourse/package.json",
-            "frontend/asset-processor/package.json"
-          ]
-        }
-      ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "e89a2ff921e4495a36fbe93ff0786bfb71c7b1f5",
-        "result": "green",
-        "retries": 0,
-        "failing": []
-      },
-      "bisect": null,
-      "escalated_at": null,
-      "opened_at": "2026-10-30T17:09:23Z"
-    },
-    {
       "number": 45406,
       "kind": "batch",
       "branch": "deps/batch-20261030-1706",
@@ -519,14 +486,6 @@
       "reason": "@discourse/lint-configs 3.9.1 needs exactly eslint 10.6.0, prettier 3.8.1 and stylelint 17.5.0 as peers, so these move when lint-configs does.",
       "since": "2026-10-30",
       "recheck_after": "2026-11-30"
-    },
-    {
-      "ecosystem": "npm",
-      "name": "vitest",
-      "versions": ">= 5.0.5",
-      "reason": "vite is a peer of vitest and no package.json declares it, so updating vitest drops vite from the lockfile. Wait until #45405 declares vite.",
-      "since": "2026-10-30",
-      "recheck_after": "2026-11-13"
     },
     {
       "ecosystem": "gem",

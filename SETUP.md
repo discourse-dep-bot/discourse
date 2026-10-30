@@ -26,7 +26,9 @@
 bin/run-loop /path/to/token.txt
 ```
 
-Each run clones this branch into a temporary directory and starts `claude -p` there, so the agent finds the skill. The token is passed through the environment only, and commits are made as `discourse-dep-bot`. What the agent says and each command it runs are printed to the terminal as it goes.
+Each run clones this branch into a fresh directory and starts `claude -p` there, so the agent finds the skill. The token is passed through the environment only, and commits are made as `discourse-dep-bot`. What the agent says and each command it runs are printed to the terminal as it goes.
+
+The loop keeps a mirror of discourse/discourse's `main` in `~/.cache/dep-bot/discourse.git`, or in `DEP_BOT_CACHE_DIR`. It refreshes the mirror before each run and gives the run a local clone of it, so only the first run downloads the whole repository.
 
 Runs that overlap are safe. A run that finds another one in progress stops at once.
 

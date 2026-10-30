@@ -36,11 +36,13 @@ It keeps these PRs going:
 
 ## Each run
 
-1. **Set up.** The agent starts in `bot/`, a clone of the fork's `dep-bot` branch. Make a work clone of discourse/discourse next to it:
+1. **Set up.** The agent starts in `bot/`, a clone of the fork's `dep-bot` branch. `bin/run-loop` puts an up-to-date clone of discourse/discourse next to it in `../work`, with the fork as its `fork` remote. If `../work` is missing, make one:
 
    ```bash
-   git clone --filter=blob:none https://github.com/discourse/discourse ../work
-   git -C ../work remote add fork https://github.com/discourse-dep-bot/discourse
+   if [ ! -d ../work ]; then
+     git clone --filter=blob:none https://github.com/discourse/discourse ../work
+     git -C ../work remote add fork https://github.com/discourse-dep-bot/discourse
+   fi
    export GH_REPO=discourse/discourse
    export SKILL="$PWD/.claude/skills/discourse-dependency-updates"
    gh auth status

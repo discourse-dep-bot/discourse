@@ -10,6 +10,8 @@
 # Environment:
 #   DEP_BOT_INTERVAL   seconds between the starts of two runs (default 900)
 #   DEP_BOT_TIMEOUT    longest a single run may take (default 110m, less than the state lease)
+#   DEP_BOT_CACHE_DIR  where the discourse/discourse mirror and run directories live
+#                      (default ~/.cache/dep-bot)
 #
 # Needs git, gh, claude, Ruby with Bundler, and Node with pnpm on PATH.
 set -euo pipefail
@@ -19,6 +21,9 @@ interval="${DEP_BOT_INTERVAL:-900}"
 run_timeout="${DEP_BOT_TIMEOUT:-110m}"
 prompt="Do this run of the dependency bot, following the discourse-dependency-updates skill."
 bin_dir="$(cd "$(dirname "$0")" && pwd)"
+cache_dir="${DEP_BOT_CACHE_DIR:-$HOME/.cache/dep-bot}"
+mirror="$cache_dir/discourse.git"
+upstream="https://github.com/discourse/discourse"
 
 source "$bin_dir/bot-env" "$token_file"
 
@@ -48,15 +53,39 @@ stop() {
 }
 trap stop INT TERM
 
+# A bare mirror of upstream main, refreshed before each run. Each run's work
+# clone is a local clone of it, which hard-links objects instead of downloading them.
+update_mirror() {
+  if [[ -d "$mirror" ]]; then
+    git -C "$mirror" fetch --quiet origin "+refs/heads/main:refs/heads/main"
+  else
+    echo "$(date -u +%H:%M:%S) making a mirror of $upstream in $mirror (only the first run does this)"
+    git clone --quiet --bare --single-branch --branch main "$upstream" "$mirror"
+  fi
+}
+
+prepare_work() {
+  local work="$1"
+  git clone --quiet --local --branch main "$mirror" "$work"
+  git -C "$work" remote set-url origin "$upstream"
+  git -C "$work" config remote.origin.fetch "+refs/heads/main:refs/remotes/origin/main"
+  git -C "$work" fetch --quiet origin
+  git -C "$work" remote add fork "$bot_fork"
+  git -C "$work" config remote.fork.fetch "+refs/heads/deps/*:refs/remotes/fork/deps/*"
+}
+
+mkdir -p "$cache_dir/runs"
 echo "Running as $bot_login every $interval seconds. Press Ctrl+C to stop."
 
 while true; do
   started=$(date +%s)
-  run_dir="$(mktemp -d)"
+  run_dir="$(mktemp -d "$cache_dir/runs/run.XXXXXX")"
   echo "$(date -u +%H:%M:%S) run started in $run_dir"
 
   (
     cd "$run_dir"
+    update_mirror
+    prepare_work "$run_dir/work"
     git clone --quiet --single-branch --branch dep-bot "$bot_fork" bot
     cd bot
     timeout "$run_timeout" claude -p "$prompt" --dangerously-skip-permissions \

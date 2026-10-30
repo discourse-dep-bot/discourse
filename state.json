@@ -432,6 +432,42 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-10-30T17:15:47Z"
+    },
+    {
+      "number": 45411,
+      "kind": "single",
+      "branch": "deps/atlaskit-pragmatic-drag-and-drop-4.0.0",
+      "base_sha": "5bb0757acc6f69c8aaabee27f1d75e3112e0b315",
+      "head_sha": "bee5a53eaab3b9cabf52ecfeb5f10efd4c477b7b",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-10-30T18:31:59Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "@atlaskit/pragmatic-drag-and-drop",
+          "from": "3.1.0",
+          "to": "4.0.0",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+          "from": "3.2.0",
+          "to": "3.2.1",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-10-30T18:31:59Z"
     }
   ],
   "held": [

@@ -37,8 +37,8 @@
       "number": 45406,
       "kind": "batch",
       "branch": "deps/batch-20261030-1706",
-      "base_sha": "5bb0757acc6f69c8aaabee27f1d75e3112e0b315",
-      "head_sha": "82785afa41d58464afbf8c3375f37ec321b584b4",
+      "base_sha": "e927501a4296240732b1d584cdd1bca45a99b1fe",
+      "head_sha": "6edf879d87e8a6d626da1408afc126aac77b5a66",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -416,15 +416,6 @@
           "manifests": [
             "frontend/discourse/package.json"
           ]
-        },
-        {
-          "ecosystem": "npm",
-          "name": "prosemirror-view",
-          "from": "1.42.3",
-          "to": "1.42.7",
-          "manifests": [
-            "frontend/discourse/package.json"
-          ]
         }
       ],
       "fixes": [],
@@ -604,6 +595,14 @@
       "name": "@ember/test-helpers",
       "versions": ">= 5.5.0",
       "reason": "From 5.5.0, render() uses renderComponent from @ember/renderer on ember-source 6.12.1 and later, and Discourse uses 7.3. In #45406 (5.7.0), integration tests in core and plugins frontend failed with \"NotFoundError: Failed to execute insertBefore on Node\" from Glimmer under renderComponent, and with \"You attempted to update `categories` on Site\". Acceptance tests passed, and main is green on the same base. The test setup needs changes before this can move.",
+      "since": "2026-10-30",
+      "recheck_after": "2026-11-30"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "prosemirror-view",
+      "versions": ">= 1.42.6",
+      "reason": "From 1.42.6, prosemirror-view puts an img.ProseMirror-separator in front of an inline atom node (emoji, hashtag, mention, image, checkbox) at the start of a textblock or right after another atom, in every browser. In #45406 (1.42.7), 42 rich editor integration tests in core frontend and 3 in the checklist plugin failed with an extra separator in the HTML. frontend/discourse/tests/helpers/rich-editor-helper.gjs removes only the first separator with replace(), and the applySurround test \"selects an image created from a selected URL\" finds the separator with \".ProseMirror img\". The tests need changes, which a person must make.",
       "since": "2026-10-30",
       "recheck_after": "2026-11-30"
     }

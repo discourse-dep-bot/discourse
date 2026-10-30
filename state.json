@@ -37,8 +37,8 @@
       "number": 45406,
       "kind": "batch",
       "branch": "deps/batch-20261030-1706",
-      "base_sha": "2af99ad994eca01bd6585ea7850fa498be10fac1",
-      "head_sha": "926e416519fa2b9f842eb0ac0f52ca0003ce51eb",
+      "base_sha": "5bb0757acc6f69c8aaabee27f1d75e3112e0b315",
+      "head_sha": "82785afa41d58464afbf8c3375f37ec321b584b4",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -428,18 +428,7 @@
         }
       ],
       "fixes": [],
-      "ci": {
-        "head_sha": "926e416519fa2b9f842eb0ac0f52ca0003ce51eb",
-        "result": "red",
-        "retries": 0,
-        "failing": [
-          "core frontend: Addons | truth-helpers | Integration | includes: when using a string",
-          "core frontend: Integration | Component | A11y | LiveRegions: displays polite messages",
-          "core frontend: Integration | Component | A11y | SkipLinks: skip link height does not exceed -75px offset on narrow 320px viewports",
-          "core frontend: Integration | Component | AboutPage: custom site activities registered via the plugin API",
-          "plugins frontend: 121 of 425 tests, mostly integration tests, with the same errors"
-        ]
-      },
+      "ci": null,
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-10-30T17:15:47Z"

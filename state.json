@@ -80,6 +80,34 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-10-30T17:03:17Z"
+    },
+    {
+      "number": 45405,
+      "kind": "single",
+      "branch": "deps/vite-8.2.4",
+      "base_sha": "2af99ad994eca01bd6585ea7850fa498be10fac1",
+      "head_sha": "704fd83d363dcdb008673190f786f06846d997f4",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-10-30T17:09:23Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "vite",
+          "from": "8.2.2",
+          "to": "8.2.4",
+          "manifests": [
+            "frontend/discourse/package.json",
+            "frontend/asset-processor/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-10-30T17:09:23Z"
     }
   ],
   "held": [],

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Runs the dependency bot every 15 minutes, each run in a fresh directory, and
-# prints what the agent does as it goes.
+# prints what the agent does as it goes. Ctrl+C stops the loop and the current run.
 #
 # Usage: bin/run-loop TOKEN_FILE
 #
@@ -18,24 +18,51 @@ token_file="${1:?Usage: bin/run-loop TOKEN_FILE}"
 interval="${DEP_BOT_INTERVAL:-900}"
 run_timeout="${DEP_BOT_TIMEOUT:-110m}"
 prompt="Do this run of the dependency bot, following the discourse-dependency-updates skill."
-format_stream="$(cd "$(dirname "$0")" && pwd)/format-stream"
+bin_dir="$(cd "$(dirname "$0")" && pwd)"
 
-source "$(dirname "$0")/bot-env" "$token_file"
+source "$bin_dir/bot-env" "$token_file"
 
-echo "Running as $bot_login every $interval seconds."
+descendants() {
+  local child
+  for child in $(pgrep -P "$1"); do
+    echo "$child"
+    descendants "$child"
+  done
+}
+
+# Runs and sleeps happen in the background so that a signal reaches this trap at
+# once, even if something in the run ignores it.
+stop() {
+  trap - INT TERM
+  echo
+  echo "Stopping."
+  local pids
+  pids="$(descendants $$)"
+  if [[ -n "$pids" ]]; then
+    kill -TERM $pids 2>/dev/null || true
+    sleep 2
+    kill -KILL $pids $(descendants $$) 2>/dev/null || true
+  fi
+  echo "If a run was in progress, clear its lease with: $bin_dir/clear-lease $token_file"
+  exit 130
+}
+trap stop INT TERM
+
+echo "Running as $bot_login every $interval seconds. Press Ctrl+C to stop."
 
 while true; do
   started=$(date +%s)
   run_dir="$(mktemp -d)"
   echo "$(date -u +%H:%M:%S) run started in $run_dir"
 
-  if (
+  (
     cd "$run_dir"
     git clone --quiet --single-branch --branch dep-bot "$bot_fork" bot
     cd bot
     timeout "$run_timeout" claude -p "$prompt" --dangerously-skip-permissions \
-      --output-format stream-json --verbose | ruby "$format_stream"
-  ); then
+      --output-format stream-json --verbose < /dev/null | ruby "$bin_dir/format-stream"
+  ) &
+  if wait $!; then
     echo "$(date -u +%H:%M:%S) run finished"
   else
     echo "$(date -u +%H:%M:%S) run failed" >&2
@@ -43,5 +70,8 @@ while true; do
 
   rm -rf "$run_dir"
   elapsed=$(( $(date +%s) - started ))
-  (( elapsed < interval )) && sleep $(( interval - elapsed ))
+  if (( elapsed < interval )); then
+    sleep $(( interval - elapsed )) &
+    wait $!
+  fi
 done

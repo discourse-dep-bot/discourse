@@ -7,6 +7,7 @@
 require "json"
 
 $stdout.sync = true
+trap("INT") { exit 130 }
 
 def say(text)
   stamp = Time.now.utc.strftime("%H:%M:%S")

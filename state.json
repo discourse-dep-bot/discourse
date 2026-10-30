@@ -11,9 +11,9 @@
       "branch": "deps/vite-8.2.4",
       "base_sha": "5bb0757acc6f69c8aaabee27f1d75e3112e0b315",
       "head_sha": "e89a2ff921e4495a36fbe93ff0786bfb71c7b1f5",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-10-30T19:00:19Z",
       "comments_seen_at": "2026-10-30T17:42:36Z",
       "updates": [
         {
@@ -28,7 +28,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "e89a2ff921e4495a36fbe93ff0786bfb71c7b1f5",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-10-30T17:09:23Z"

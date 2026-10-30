@@ -91,11 +91,11 @@
       "kind": "single",
       "branch": "deps/vite-8.2.4",
       "base_sha": "2af99ad994eca01bd6585ea7850fa498be10fac1",
-      "head_sha": "704fd83d363dcdb008673190f786f06846d997f4",
+      "head_sha": "bcc19e7bdd691060e9725cd164edd9525b38fdd6",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
-      "comments_seen_at": "2026-10-30T17:09:23Z",
+      "comments_seen_at": "2026-10-30T17:30:32Z",
       "updates": [
         {
           "ecosystem": "npm",

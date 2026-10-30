@@ -76,6 +76,8 @@ $SKILL/scripts/pnpm_lockfile_diff.rb origin/main
 
 If dedupe moves another package that has its own pending update, raise that package's specifier too, and record it in the PR's updates.
 
+When a `package.json` declares a package for the first time, for example a peer dependency that nothing else installs, use a caret range. A new caret range resolves to the newest eligible version. To land an older one, declare it exact first, run `pnpm install --lockfile-only`, then change it to the caret range and run it again. pnpm keeps the version it has locked, because it satisfies the range.
+
 **GitHub Actions**
 
 Update the version in each `uses:` line. Pushing a change to `.github/workflows` to the fork needs a token with `workflow` scope. If the push is refused, leave the GitHub Actions updates out.

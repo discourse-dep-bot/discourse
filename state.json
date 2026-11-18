@@ -6,71 +6,6 @@
   },
   "prs": [
     {
-      "number": 46450,
-      "kind": "alerts",
-      "branch": "deps/alerts-20261118-1245",
-      "base_sha": "64d4db7d580e6e614d9f653dda39ede3127a9d2a",
-      "head_sha": "3903a44e5d0b053d59ebfb0b4c759f7c001ad16c",
-      "status": "ready",
-      "replaces": null,
-      "ready_at": "2026-11-18T14:01:10Z",
-      "comments_seen_at": "2026-11-18T12:45:55Z",
-      "updates": [
-        {
-          "ecosystem": "gem",
-          "name": "addressable",
-          "from": "2.9.0",
-          "to": "2.9.2"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "msgpack",
-          "from": "1.8.5",
-          "to": "1.8.7"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "omniauth",
-          "from": "2.1.2",
-          "to": "2.3.1"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "rack",
-          "from": "2.2.24",
-          "to": "2.2.25"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "sanitize",
-          "from": "7.0.1",
-          "to": "7.0.2"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "sqlite3",
-          "from": "2.9.6",
-          "to": "2.10.2"
-        },
-        {
-          "ecosystem": "npm",
-          "name": "follow-redirects",
-          "from": "1.16.1",
-          "to": "1.16.3"
-        }
-      ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "3903a44e5d0b053d59ebfb0b4c759f7c001ad16c",
-        "result": "green",
-        "retries": 0,
-        "failing": []
-      },
-      "bisect": null,
-      "escalated_at": null,
-      "opened_at": "2026-11-18T12:45:55Z"
-    },
-    {
       "number": 46452,
       "kind": "batch",
       "branch": "deps/batch-20261118-1248",
@@ -79,7 +14,7 @@
       "status": "ready",
       "replaces": null,
       "ready_at": "2026-11-18T14:01:10Z",
-      "comments_seen_at": "2026-11-18T12:50:43Z",
+      "comments_seen_at": "2026-11-18T14:14:42Z",
       "updates": [
         {
           "ecosystem": "gem",

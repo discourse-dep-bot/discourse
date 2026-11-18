@@ -11,9 +11,9 @@
       "branch": "deps/alerts-20261118-1245",
       "base_sha": "64d4db7d580e6e614d9f653dda39ede3127a9d2a",
       "head_sha": "3903a44e5d0b053d59ebfb0b4c759f7c001ad16c",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-18T14:01:10Z",
       "comments_seen_at": "2026-11-18T12:45:55Z",
       "updates": [
         {
@@ -60,7 +60,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "3903a44e5d0b053d59ebfb0b4c759f7c001ad16c",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:45:55Z"
@@ -71,9 +76,9 @@
       "branch": "deps/batch-20261118-1248",
       "base_sha": "64d4db7d580e6e614d9f653dda39ede3127a9d2a",
       "head_sha": "f5877acc7ad202b66f785327a642084b58b85bb0",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-18T14:01:10Z",
       "comments_seen_at": "2026-11-18T12:50:43Z",
       "updates": [
         {
@@ -792,7 +797,12 @@
       "fixes": [
         "f5877acc7ad202b66f785327a642084b58b85bb0"
       ],
-      "ci": null,
+      "ci": {
+        "head_sha": "f5877acc7ad202b66f785327a642084b58b85bb0",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:50:43Z"

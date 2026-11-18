@@ -9,8 +9,8 @@
       "number": 46450,
       "kind": "alerts",
       "branch": "deps/alerts-20261118-1245",
-      "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
-      "head_sha": "f6ddc15ee52da24ec188f3d1ad5d930112f1bb3a",
+      "base_sha": "64d4db7d580e6e614d9f653dda39ede3127a9d2a",
+      "head_sha": "3903a44e5d0b053d59ebfb0b4c759f7c001ad16c",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -60,14 +60,7 @@
         }
       ],
       "fixes": [],
-      "ci": {
-        "head_sha": "f6ddc15ee52da24ec188f3d1ad5d930112f1bb3a",
-        "result": null,
-        "retries": 1,
-        "failing": [
-          "frontend/discourse/tests/acceptance/reports-test.js: Acceptance: Reports | Filter query params: reset button clears both params from the URL (flake: URL assertion, passed in #46452 on the same base)"
-        ]
-      },
+      "ci": null,
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:45:55Z"
@@ -803,47 +796,6 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:50:43Z"
-    },
-    {
-      "number": 46454,
-      "kind": "single",
-      "branch": "deps/pragmatic-drag-and-drop-4.0.0",
-      "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
-      "head_sha": "7ac139ee2f68dcf9fb216169af3135461ca5075c",
-      "status": "ready",
-      "replaces": null,
-      "ready_at": "2026-11-18T13:15:09Z",
-      "comments_seen_at": "2026-11-18T13:02:57Z",
-      "updates": [
-        {
-          "ecosystem": "npm",
-          "name": "@atlaskit/pragmatic-drag-and-drop",
-          "from": "3.1.0",
-          "to": "4.0.0",
-          "manifests": [
-            "frontend/discourse/package.json"
-          ]
-        },
-        {
-          "ecosystem": "npm",
-          "name": "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-          "from": "3.2.0",
-          "to": "3.2.1",
-          "manifests": [
-            "frontend/discourse/package.json"
-          ]
-        }
-      ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "7ac139ee2f68dcf9fb216169af3135461ca5075c",
-        "result": "green",
-        "retries": 0,
-        "failing": []
-      },
-      "bisect": null,
-      "escalated_at": null,
-      "opened_at": "2026-11-18T13:02:57Z"
     }
   ],
   "held": [

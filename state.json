@@ -69,8 +69,8 @@
       "number": 46452,
       "kind": "batch",
       "branch": "deps/batch-20261118-1248",
-      "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
-      "head_sha": "958c6c471109340c73f6b493f035feb3189f14a3",
+      "base_sha": "64d4db7d580e6e614d9f653dda39ede3127a9d2a",
+      "head_sha": "f5877acc7ad202b66f785327a642084b58b85bb0",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -790,7 +790,7 @@
         }
       ],
       "fixes": [
-        "958c6c471109340c73f6b493f035feb3189f14a3"
+        "f5877acc7ad202b66f785327a642084b58b85bb0"
       ],
       "ci": null,
       "bisect": null,

@@ -77,7 +77,7 @@
       "kind": "batch",
       "branch": "deps/batch-20261118-1248",
       "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
-      "head_sha": "5f7b13b4ef9b13e3d0396cd47bed8c9953a0d729",
+      "head_sha": "958c6c471109340c73f6b493f035feb3189f14a3",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -88,12 +88,6 @@
           "name": "afm",
           "from": "1.0.0",
           "to": "1.0.1"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "annotaterb",
-          "from": "4.25.0",
-          "to": "4.26.0"
         },
         {
           "ecosystem": "gem",
@@ -802,15 +796,10 @@
           "to": "v8"
         }
       ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "5f7b13b4ef9b13e3d0396cd47bed8c9953a0d729",
-        "result": null,
-        "retries": 0,
-        "failing": [
-          "Check Annotations in plugins backend (run 44307776933): annotaterb 4.26.0 writes enum defaults by name, e.g. card_style default(\"detailed\") where plugins/boards models have default(0)"
-        ]
-      },
+      "fixes": [
+        "958c6c471109340c73f6b493f035feb3189f14a3"
+      ],
+      "ci": null,
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:50:43Z"
@@ -991,6 +980,14 @@
       "name": "ember-source",
       "versions": ">= 7.4.0",
       "reason": "7.4 raises its browser floor to iOS 16.6 and Safari 18.5, and frontend/discourse/config/targets.js still lists Safari 16.4 and iOS 16.4; a person must decide whether Discourse drops those",
+      "since": "2026-11-18",
+      "recheck_after": "2026-12-18"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "annotaterb",
+      "versions": ">= 4.26.0",
+      "reason": "4.26.0 writes enum column defaults by name, such as default(\"detailed\") where the plugins/boards annotations say default(0), so Check Annotations fails until a person regenerates them (found in #46452)",
       "since": "2026-11-18",
       "recheck_after": "2026-12-18"
     }

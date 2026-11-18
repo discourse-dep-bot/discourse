@@ -821,9 +821,9 @@
       "branch": "deps/pragmatic-drag-and-drop-4.0.0",
       "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
       "head_sha": "7ac139ee2f68dcf9fb216169af3135461ca5075c",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-18T13:15:09Z",
       "comments_seen_at": "2026-11-18T13:02:57Z",
       "updates": [
         {
@@ -846,7 +846,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "7ac139ee2f68dcf9fb216169af3135461ca5075c",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T13:02:57Z"

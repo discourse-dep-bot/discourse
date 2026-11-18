@@ -9,7 +9,7 @@ A run is in progress. Its lease expires at 2026-11-18T16:14:07Z.
 | PR | Kind | Status | CI | Updates | Notes |
 | --- | --- | --- | --- | --- | --- |
 | [#46452](https://github.com/discourse/discourse/pull/46452) | batch | ready | green | 96 |  |
-| [#46458](https://github.com/discourse/discourse/pull/46458) | single | draft | running, 1 failing | 2 |  |
+| [#46458](https://github.com/discourse/discourse/pull/46458) | single | draft | running | 2 |  |
 
 ### [#46452](https://github.com/discourse/discourse/pull/46452) batch
 
@@ -114,9 +114,6 @@ A run is in progress. Its lease expires at 2026-11-18T16:14:07Z.
 
 - `cose` 1.3.1 → 1.4.0 (gem)
 - `cbor` 0.5.10.3 → 0.6.2.2 (gem)
-
-Failing:
-- `plugins/live: Live | Unit | Lib | file-transfer-manager: slow disk bounds sender window and flush gates completion (plugins frontend, run 44314804672; timing assertion 96 vs 128)`
 
 ## Held
 

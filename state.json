@@ -746,8 +746,8 @@
       "number": 46458,
       "kind": "single",
       "branch": "deps/cose-1.4.0",
-      "base_sha": "64d4db7d580e6e614d9f653dda39ede3127a9d2a",
-      "head_sha": "b9c307f261977f031777db483a16dddfe9c6f9b5",
+      "base_sha": "ed1a26fe07bbda10def833a470cb029796c35d7d",
+      "head_sha": "01d353d6fc4c30a183adbade5a1c22e5d37e7e0e",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -767,14 +767,7 @@
         }
       ],
       "fixes": [],
-      "ci": {
-        "head_sha": "b9c307f261977f031777db483a16dddfe9c6f9b5",
-        "result": null,
-        "retries": 1,
-        "failing": [
-          "plugins/live: Live | Unit | Lib | file-transfer-manager: slow disk bounds sender window and flush gates completion (plugins frontend, run 44314804672; timing assertion 96 vs 128)"
-        ]
-      },
+      "ci": null,
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T13:32:46Z"

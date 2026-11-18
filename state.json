@@ -782,7 +782,7 @@
       "kind": "batch",
       "branch": "deps/batch-20261118-1444",
       "base_sha": "3ef04743863d6e468ca5b5c7d43469232f234d9d",
-      "head_sha": "df91019c7116bdbc36e16acb2757fa6e6aaaf442",
+      "head_sha": "950bb1b637f300cca310a4dee7876b73a0d0c038",
       "status": "draft",
       "replaces": 46452,
       "ready_at": null,
@@ -1502,9 +1502,17 @@
         }
       ],
       "fixes": [
-        "df91019c7116bdbc36e16acb2757fa6e6aaaf442"
+        "950bb1b637f300cca310a4dee7876b73a0d0c038"
       ],
-      "ci": null,
+      "ci": {
+        "head_sha": "950bb1b637f300cca310a4dee7876b73a0d0c038",
+        "result": null,
+        "retries": 1,
+        "failing": [
+          "frontend/discourse/tests/acceptance/reports-test.js: Reports | Filter query params: reset button clears both params from the URL",
+          "plugins/discourse-live: Live | Unit | Lib | file-transfer-manager: slow disk bounds sender window and flush gates completion"
+        ]
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T14:46:07Z"

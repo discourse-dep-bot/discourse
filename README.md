@@ -11,7 +11,7 @@ A run is in progress. Its lease expires at 2026-11-18T17:13:42Z.
 | [#46452](https://github.com/discourse/discourse/pull/46452) | batch | ready | green | 96 |  |
 | [#46458](https://github.com/discourse/discourse/pull/46458) | single | ready | green | 2 |  |
 | [#46466](https://github.com/discourse/discourse/pull/46466) | batch | draft | running, 2 failing | 96 | replaces [#46452](https://github.com/discourse/discourse/pull/46452) |
-| [#46467](https://github.com/discourse/discourse/pull/46467) | single | draft | running | 1 |  |
+| [#46467](https://github.com/discourse/discourse/pull/46467) | single | ready | green | 1 |  |
 
 ### [#46452](https://github.com/discourse/discourse/pull/46452) batch
 

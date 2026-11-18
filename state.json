@@ -1523,9 +1523,9 @@
       "branch": "deps/xss-1.0.17",
       "base_sha": "3ef04743863d6e468ca5b5c7d43469232f234d9d",
       "head_sha": "273de73a08282eaf186ad76ee58d5efe16bdf668",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-18T15:15:40Z",
       "comments_seen_at": "2026-11-18T14:47:58Z",
       "updates": [
         {
@@ -1541,7 +1541,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "273de73a08282eaf186ad76ee58d5efe16bdf668",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T14:47:58Z"

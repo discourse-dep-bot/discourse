@@ -127,7 +127,7 @@ A run is in progress. Its lease expires at 2026-11-18T15:59:09Z.
 - `cbor` 0.5.10.3 → 0.6.2.2 (gem)
 
 Failing:
-- `plugins/live: Live | Unit | Lib | file-transfer-manager: slow disk bounds sender window and flush gates completion (plugins frontend, run 44314804672; timing assertion 96 vs 128, and the PR changes only Gemfile.lock, so likely a flake)`
+- `plugins/live: Live | Unit | Lib | file-transfer-manager: slow disk bounds sender window and flush gates completion (plugins frontend, run 44314804672; timing assertion 96 vs 128)`
 
 ## Held
 
@@ -154,6 +154,6 @@ Failing:
 
 ## Latest activity
 
-### 2026-11-18T14:01:23Z
+### 2026-11-18T14:01:54Z
 
-Marked #46450 (alerts) and #46452 (batch) ready for review: every check passed on their head commits.
+Retried CI on #46458 (cose): the only failure was a timing assertion in a Live plugin QUnit test, and the PR changes only Ruby gems in Gemfile.lock, so it is a flake. Retry 1 of 2.

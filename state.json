@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-18T13:28:44Z",
-    "expires_at": "2026-11-18T15:28:44Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46450,
@@ -796,6 +793,36 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:50:43Z"
+    },
+    {
+      "number": 46458,
+      "kind": "single",
+      "branch": "deps/cose-1.4.0",
+      "base_sha": "64d4db7d580e6e614d9f653dda39ede3127a9d2a",
+      "head_sha": "2ce4c595db284f32e9d2c055be3ffd77f59d900e",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-18T13:32:46Z",
+      "updates": [
+        {
+          "ecosystem": "gem",
+          "name": "cose",
+          "from": "1.3.1",
+          "to": "1.4.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "cbor",
+          "from": "0.5.10.3",
+          "to": "0.6.2.2"
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-18T13:32:46Z"
     }
   ],
   "held": [

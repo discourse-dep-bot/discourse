@@ -800,6 +800,30 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:50:43Z"
+    },
+    {
+      "number": 46453,
+      "kind": "single",
+      "branch": "deps/oj-3.17.8",
+      "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
+      "head_sha": "b1ff0622504dae01b3ba05ba2a889a692ebceecd",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-18T12:51:32Z",
+      "updates": [
+        {
+          "ecosystem": "gem",
+          "name": "oj",
+          "from": "3.17.7",
+          "to": "3.17.8"
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-18T12:51:32Z"
     }
   ],
   "held": [

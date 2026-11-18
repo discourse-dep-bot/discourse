@@ -102,16 +102,18 @@ Read any new comments (see "Comments"). Then take the first action that matches:
 
 A ready PR is brought up to date by replacing it, so that reviewers always have a green PR in front of them.
 
-Open a replacement when there is no draft of the same kind yet, and the ready PR is not approved, and one of these is true:
-- a reviewer asked for a change to it (see "Comments");
-- it conflicts with main;
-- it is an `alerts` PR, and a new update has been flagged;
-- it is a `batch` PR, it has been ready for more than a day, and there are new updates.
+Open a replacement when there is no draft of the same kind yet, and one of these is true:
+- it conflicts with main, even if it is approved, because it cannot be merged until the conflict is gone;
+- it is not approved, and a reviewer asked for a change to it (see "Comments");
+- it is not approved, it is an `alerts` PR, and a new update has been flagged;
+- it is not approved, it is a `batch` PR, it has been ready for more than a day, and there are new updates.
 
 The replacement is a new draft PR, built from current main, that contains:
 - the ready PR's updates, each moved to its newest eligible version;
 - the new updates;
 - the ready PR's `fixes`, cherry-picked.
+
+When the ready PR is approved, the replacement keeps its exact versions and adds no new updates, so that reviewers can approve the same changes again. Comment on the approved PR: "This conflicts with main. #<new> has the same updates on current main and will replace this PR once its CI passes."
 
 Record the ready PR's number in the replacement's `replaces`, and start its body with "Replaces #<old>."
 
@@ -121,7 +123,7 @@ When the replacement is green and ready, close the old PR:
 gh pr close <old> --comment "Superseded by #<new>." --delete-branch
 ```
 
-If the old PR was approved in the meantime, do not close it. Leave the replacement as a draft until the old PR is merged or closed.
+If the old PR was approved after the replacement was opened, and it does not conflict with main, do not close it. Leave the replacement as a draft until the old PR is merged or closed.
 
 ### Rebuilding
 

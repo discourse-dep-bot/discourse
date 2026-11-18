@@ -60,7 +60,14 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "e46e8be2d28569c7e8ef842a0223ea97cda0e3b8",
+        "result": null,
+        "retries": 0,
+        "failing": [
+          "frontend/discourse/tests/acceptance/reports-test.js: Acceptance: Reports | Filter query params: reset button clears both params from the URL (core frontend, run 44307025421; the PR changes only lockfiles and main passed at the same base, so likely a flake)"
+        ]
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:45:55Z"
@@ -796,7 +803,14 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "5f7b13b4ef9b13e3d0396cd47bed8c9953a0d729",
+        "result": null,
+        "retries": 0,
+        "failing": [
+          "Check Annotations in plugins backend (run 44307776933): annotaterb 4.26.0 writes enum defaults by name, e.g. card_style default(\"detailed\") where plugins/boards models have default(0)"
+        ]
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:50:43Z"

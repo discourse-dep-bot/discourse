@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-18T14:43:53Z",
-    "expires_at": "2026-11-18T16:43:53Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46452,
@@ -1508,6 +1505,35 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T14:46:07Z"
+    },
+    {
+      "number": 46467,
+      "kind": "single",
+      "branch": "deps/xss-1.0.17",
+      "base_sha": "3ef04743863d6e468ca5b5c7d43469232f234d9d",
+      "head_sha": "273de73a08282eaf186ad76ee58d5efe16bdf668",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-18T14:47:58Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "xss",
+          "from": "1.0.15",
+          "to": "1.0.17",
+          "manifests": [
+            "frontend/discourse/package.json",
+            "frontend/discourse-markdown-it/package.json",
+            "frontend/pretty-text-processor/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-18T14:47:58Z"
     }
   ],
   "held": [

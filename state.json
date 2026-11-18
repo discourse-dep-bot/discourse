@@ -748,9 +748,9 @@
       "branch": "deps/cose-1.4.0",
       "base_sha": "ed1a26fe07bbda10def833a470cb029796c35d7d",
       "head_sha": "01d353d6fc4c30a183adbade5a1c22e5d37e7e0e",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-18T14:44:16Z",
       "comments_seen_at": "2026-11-18T13:32:46Z",
       "updates": [
         {
@@ -767,7 +767,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "01d353d6fc4c30a183adbade5a1c22e5d37e7e0e",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T13:32:46Z"

@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-18T14:58:42Z",
-    "expires_at": "2026-11-18T16:58:42Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46452,
@@ -1683,6 +1680,30 @@
       "reason": "4.26.0 writes enum column defaults by name, such as default(\"detailed\") where the plugins/boards annotations say default(0), so Check Annotations fails until a person regenerates them (found in #46452)",
       "since": "2026-11-18",
       "recheck_after": "2026-12-18"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@babel/*",
+      "versions": "@babel/core >= 8.0.0",
+      "reason": "@embroider/core and @embroider/compat depend on @babel/core ^7, and ember-cli-babel needs it as a peer",
+      "since": "2026-11-18",
+      "recheck_after": "2026-12-18"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@fullcalendar/*",
+      "versions": "@fullcalendar/core >= 7.0.0",
+      "reason": "the daygrid, timegrid, list, interaction, moment and moment-timezone plugins have no 7.x release and need @fullcalendar/core ~6.1.22",
+      "since": "2026-11-18",
+      "recheck_after": "2026-12-18"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@uppy/*",
+      "versions": "@uppy/core >= 6.0.0",
+      "reason": "@uppy/aws-s3 6 removes the createMultipartUpload, signPart and getUploadParameters options that lib/uppy/s3-multipart.js and uppy-upload.js use, and @uppy/utils, which loader-shims.js gives to plugins, moves into @uppy/core; a person needs to port the S3 upload code",
+      "since": "2026-11-18",
+      "recheck_after": "2027-01-18"
     }
   ],
   "handed_over": []

@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-18T12:58:42Z",
-    "expires_at": "2026-11-18T14:58:42Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46450,
@@ -814,6 +811,42 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T12:50:43Z"
+    },
+    {
+      "number": 46454,
+      "kind": "single",
+      "branch": "deps/pragmatic-drag-and-drop-4.0.0",
+      "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
+      "head_sha": "7ac139ee2f68dcf9fb216169af3135461ca5075c",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-18T13:02:57Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "@atlaskit/pragmatic-drag-and-drop",
+          "from": "3.1.0",
+          "to": "4.0.0",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+          "from": "3.2.0",
+          "to": "3.2.1",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-18T13:02:57Z"
     }
   ],
   "held": [
@@ -934,6 +967,22 @@
       "name": "oj",
       "versions": ">= 3.17.8",
       "reason": "3.17.8 drops its ostruct dependency, and lib/onebox.rb requires ostruct, which Ruby 4.0 does not ship; needs gem \"ostruct\" in the Gemfile (found in #46453)",
+      "since": "2026-11-18",
+      "recheck_after": "2026-12-18"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "omniauth-facebook",
+      "versions": ">= 11.0.0",
+      "reason": "11.0.0 drops the access token from the profile picture URL, and Facebook serves a placeholder picture for app-scoped users without one, so Facebook sign-ups could lose their avatars",
+      "since": "2026-11-18",
+      "recheck_after": "2026-12-18"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "ember-source",
+      "versions": ">= 7.4.0",
+      "reason": "7.4 raises its browser floor to iOS 16.6 and Safari 18.5, and frontend/discourse/config/targets.js still lists Safari 16.4 and iOS 16.4; a person must decide whether Discourse drops those",
       "since": "2026-11-18",
       "recheck_after": "2026-12-18"
     }

@@ -23,7 +23,7 @@ A run is in progress. Its lease expires at 2026-11-18T15:13:41Z.
 - `follow-redirects` 1.16.1 → 1.16.3 (npm)
 
 Failing:
-- `frontend/discourse/tests/acceptance/reports-test.js: Acceptance: Reports | Filter query params: reset button clears both params from the URL (core frontend, run 44307025421; the PR changes only lockfiles and main passed at the same base, so likely a flake)`
+- `frontend/discourse/tests/acceptance/reports-test.js: Acceptance: Reports | Filter query params: reset button clears both params from the URL (flake: URL assertion, passed in #46452 on the same base)`
 
 ### [#46452](https://github.com/discourse/discourse/pull/46452) batch
 

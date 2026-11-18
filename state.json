@@ -10,7 +10,7 @@
       "kind": "alerts",
       "branch": "deps/alerts-20261118-1245",
       "base_sha": "89fcba3280155ee0fc89db796be7e456b6f968de",
-      "head_sha": "e46e8be2d28569c7e8ef842a0223ea97cda0e3b8",
+      "head_sha": "f6ddc15ee52da24ec188f3d1ad5d930112f1bb3a",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -61,11 +61,11 @@
       ],
       "fixes": [],
       "ci": {
-        "head_sha": "e46e8be2d28569c7e8ef842a0223ea97cda0e3b8",
+        "head_sha": "f6ddc15ee52da24ec188f3d1ad5d930112f1bb3a",
         "result": null,
-        "retries": 0,
+        "retries": 1,
         "failing": [
-          "frontend/discourse/tests/acceptance/reports-test.js: Acceptance: Reports | Filter query params: reset button clears both params from the URL (core frontend, run 44307025421; the PR changes only lockfiles and main passed at the same base, so likely a flake)"
+          "frontend/discourse/tests/acceptance/reports-test.js: Acceptance: Reports | Filter query params: reset button clears both params from the URL (flake: URL assertion, passed in #46452 on the same base)"
         ]
       },
       "bisect": null,

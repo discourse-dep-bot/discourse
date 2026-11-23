@@ -109,11 +109,7 @@ One commit per PR, with the title from the table above. Body:
 
 - `<action>` from <old> to <new>.
 
-### Held back
-
-- `<name>` <version>: <reason>.
-
 <!-- dependency-updates:<kind> -->
 ```
 
-Leave out sections with nothing in them. The marker on the last line lets a run find its PRs if the state is lost. When a PR is rebuilt, regenerate the body from the state so that it matches the updates.
+Leave out sections with nothing in them. Do not list held updates in the body: they are in the state, and the status page on the `dep-bot` branch shows them. The marker on the last line lets a run find its PRs if the state is lost. When a PR is rebuilt, regenerate the body from the state so that it matches the updates.

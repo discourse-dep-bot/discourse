@@ -11,9 +11,9 @@
       "branch": "deps/alerts-20261123-1705",
       "base_sha": "2651acdbfbe5c2e07d6b935db420206b31e9c95f",
       "head_sha": "1b97cc5fb9408ee6e3850b64bcc26ab36269d92f",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-23T17:50:12Z",
       "comments_seen_at": "2026-11-23T17:06:04Z",
       "updates": [
         {
@@ -24,7 +24,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "1b97cc5fb9408ee6e3850b64bcc26ab36269d92f",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-23T17:06:04Z"

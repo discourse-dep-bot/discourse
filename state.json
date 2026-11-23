@@ -6,35 +6,6 @@
   },
   "prs": [
     {
-      "number": 46744,
-      "kind": "alerts",
-      "branch": "deps/alerts-20261123-1623",
-      "base_sha": "09ecfd34464271ae0ccf20644c679ef4b375ef78",
-      "head_sha": "9db14a9430cb093babfd7f21298046ceeffdc445",
-      "status": "ready",
-      "replaces": null,
-      "ready_at": "2026-11-23T16:49:51Z",
-      "comments_seen_at": "2026-11-23T16:23:47Z",
-      "updates": [
-        {
-          "ecosystem": "gem",
-          "name": "puma",
-          "from": "8.0.2",
-          "to": "8.1.1"
-        }
-      ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "9db14a9430cb093babfd7f21298046ceeffdc445",
-        "result": "green",
-        "retries": 0,
-        "failing": []
-      },
-      "bisect": null,
-      "escalated_at": null,
-      "opened_at": "2026-11-23T16:23:47Z"
-    },
-    {
       "number": 46458,
       "kind": "single",
       "branch": "deps/cose-1.4.0",
@@ -73,8 +44,8 @@
       "number": 46475,
       "kind": "batch",
       "branch": "deps/batch-20261118-1630",
-      "base_sha": "09ecfd34464271ae0ccf20644c679ef4b375ef78",
-      "head_sha": "d80950619645048db751cecd7043502a6c1872cb",
+      "base_sha": "fa59d3b72127b64a78633caeebfae39d890625f4",
+      "head_sha": "e2041ac46001c37bab7ab86c10c6a7d938e6ef75",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -94,21 +65,7 @@
         }
       ],
       "fixes": [],
-      "ci": {
-        "head_sha": "d80950619645048db751cecd7043502a6c1872cb",
-        "result": null,
-        "retries": 1,
-        "failing": [
-          "spec/lib/distributed_cache_spec.rb:13",
-          "spec/lib/distributed_cache_spec.rb:6",
-          "spec/requests/admin/bot_creators_spec.rb:104",
-          "spec/requests/admin/bot_creators_spec.rb:77",
-          "spec/lib/topics_filter_spec.rb:2219",
-          "spec/lib/topics_filter_spec.rb:2230",
-          "spec/requests/mcp_oauth_authorizations_controller_spec.rb (9 examples)",
-          "spec/jobs/notify_reviewable_spec.rb:32"
-        ]
-      },
+      "ci": null,
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T16:31:51Z"

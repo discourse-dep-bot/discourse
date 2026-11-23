@@ -6,6 +6,30 @@
   },
   "prs": [
     {
+      "number": 46744,
+      "kind": "alerts",
+      "branch": "deps/alerts-20261123-1623",
+      "base_sha": "09ecfd34464271ae0ccf20644c679ef4b375ef78",
+      "head_sha": "9db14a9430cb093babfd7f21298046ceeffdc445",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-23T16:23:47Z",
+      "updates": [
+        {
+          "ecosystem": "gem",
+          "name": "puma",
+          "from": "8.0.2",
+          "to": "8.1.1"
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-23T16:23:47Z"
+    },
+    {
       "number": 46458,
       "kind": "single",
       "branch": "deps/cose-1.4.0",
@@ -239,6 +263,14 @@
       "reason": "@uppy/aws-s3 6 removes the createMultipartUpload, signPart and getUploadParameters options that lib/uppy/s3-multipart.js and uppy-upload.js use, and @uppy/utils, which loader-shims.js gives to plugins, moves into @uppy/core; a person needs to port the S3 upload code",
       "since": "2026-11-18",
       "recheck_after": "2027-01-18"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "rack-protection",
+      "versions": ">= 4.0.0",
+      "reason": "4.2.2 is the only release that fixes GHSA-pf75-2v58-7mxg and GHSA-vvhm-j6m8-64cw, and rack-protection 4 needs rack 3, which the Gemfile does not allow (rack < 3)",
+      "since": "2026-11-23",
+      "recheck_after": "2026-12-23"
     }
   ],
   "handed_over": []

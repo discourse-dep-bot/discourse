@@ -4,7 +4,7 @@ How to find updates, decide which PR they belong in, apply them, and check the r
 
 ## Rules
 
-- **Release age.** Adopt only versions published at least 7 days ago. pnpm enforces this through `minimumReleaseAge` in `pnpm-workspace.yaml`. Bundler does not: check gems with `$SKILL/scripts/release_ages.rb`, and leave a gem whose newest release is younger than that for a later run.
+- **Release age.** Adopt only versions published at least 7 days ago, except in `alerts` PRs (see "Security fixes skip the release age"). pnpm enforces this through `minimumReleaseAge` in `pnpm-workspace.yaml`. Bundler does not: check gems with `$SKILL/scripts/release_ages.rb`, and leave a gem whose newest release is younger than that for a later run.
 - **Move only what you mean to move.** Use `bundle lock --conservative`, so shared dependencies such as `i18n` stay where they are, and check that `git diff Gemfile.lock` lists only the intended gems.
 
 ## Inventory
@@ -25,6 +25,15 @@ pnpm audit
 For a flagged package that is only transitive, `pnpm why -r <pkg>` or `Gemfile.lock` shows what pulls it in. Update it with `pnpm update -r <pkg> --lockfile-only` or `bundle lock --conservative --update <gem>`. If the parent's range does not allow the patched version, update the parent.
 
 `pnpm audit --fix update` re-resolves the whole lockfile to patched versions in one step, but check its diff: it can drop packages that are only installed as peers. Plain `pnpm audit --fix` adds overrides to `pnpm-workspace.yaml`; do not use it.
+
+### Security fixes skip the release age
+
+An `alerts` update takes the patched version as soon as it is published, because waiting leaves a known vulnerability open.
+
+- **Gems:** skip the `release_ages.rb` check.
+- **npm packages:** pnpm checks the release age again when CI installs from the lockfile, so add each young version to `minimumReleaseAgeExclude` in `pnpm-workspace.yaml` as `<name>@<version>`, before you run `pnpm update`. Add only the exact patched versions, not names or ranges, and say in the PR body that they skip the release age.
+
+An exact-version entry stops having any effect once that version is 7 days old. When you build a `batch` PR, remove the `<name>@<version>` entries in `minimumReleaseAgeExclude` whose version is at least 7 days old.
 
 ## Which PR an update goes in
 

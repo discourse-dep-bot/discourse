@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-23T17:19:44Z",
-    "expires_at": "2026-11-23T19:19:44Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46759,
@@ -213,14 +210,6 @@
       "name": "oj",
       "versions": ">= 3.17.8",
       "reason": "3.17.8 drops its ostruct dependency, and lib/onebox.rb requires ostruct, which Ruby 4.0 does not ship; needs gem \"ostruct\" in the Gemfile (found in #46453)",
-      "since": "2026-11-18",
-      "recheck_after": "2026-12-18"
-    },
-    {
-      "ecosystem": "gem",
-      "name": "omniauth-facebook",
-      "versions": ">= 11.0.0",
-      "reason": "11.0.0 drops the access token from the profile picture URL, and Facebook serves a placeholder picture for app-scoped users without one, so Facebook sign-ups could lose their avatars",
       "since": "2026-11-18",
       "recheck_after": "2026-12-18"
     },

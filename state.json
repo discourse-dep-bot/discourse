@@ -74,7 +74,7 @@
       "kind": "batch",
       "branch": "deps/batch-20261118-1630",
       "base_sha": "2651acdbfbe5c2e07d6b935db420206b31e9c95f",
-      "head_sha": "43788a54eb0476c3fc15c3d3cd44f046f5a7636a",
+      "head_sha": "dbf62a74ba5c7edccd0f7ab1d73119c9235c449e",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -94,7 +94,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "dbf62a74ba5c7edccd0f7ab1d73119c9235c449e",
+        "result": "pending",
+        "retries": 1,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T16:31:51Z"

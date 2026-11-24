@@ -103,6 +103,215 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-18T16:31:51Z"
+    },
+    {
+      "number": 46817,
+      "kind": "batch",
+      "branch": "deps/batch-20261124-1822",
+      "base_sha": "4ef907b3b0754a25b094280960996ef6ec07956a",
+      "head_sha": "a76e48574ed575c9f202097805da5b7cd18fb3c7",
+      "status": "draft",
+      "replaces": 46475,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-24T18:25:45Z",
+      "updates": [
+        {
+          "ecosystem": "gem",
+          "name": "aws-partitions",
+          "from": "1.1304.0",
+          "to": "1.1306.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "aws-sdk-bedrockruntime",
+          "from": "1.94.0",
+          "to": "1.96.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "aws-sdk-core",
+          "from": "3.267.0",
+          "to": "3.269.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "aws-sdk-kms",
+          "from": "1.142.0",
+          "to": "1.144.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "aws-sdk-mediaconvert",
+          "from": "1.204.0",
+          "to": "1.206.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "aws-sdk-s3",
+          "from": "1.241.0",
+          "to": "1.243.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "aws-sdk-sns",
+          "from": "1.130.0",
+          "to": "1.132.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "hashery",
+          "from": "2.1.2",
+          "to": "2.2.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "lograge",
+          "from": "0.15.1",
+          "to": "0.16.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "markbridge",
+          "from": "0.4.3",
+          "to": "0.5.1"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "omniauth",
+          "from": "2.3.1",
+          "to": "2.4.1"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "playwright-ruby-client",
+          "from": "1.64.0",
+          "to": "1.65.0"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "regexp_parser",
+          "from": "2.13.1",
+          "to": "2.13.3"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "rubocop",
+          "from": "1.92.2",
+          "to": "1.92.3"
+        },
+        {
+          "ecosystem": "gem",
+          "name": "webmock",
+          "from": "3.29.0",
+          "to": "3.34.0"
+        },
+        {
+          "ecosystem": "npm",
+          "name": "@codemirror/lint",
+          "from": "6.9.7",
+          "to": "6.9.8",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "@csstools/postcss-light-dark-function",
+          "from": "3.0.8",
+          "to": "3.0.9",
+          "manifests": [
+            "frontend/asset-processor/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "@rollup/browser",
+          "from": "4.68.2",
+          "to": "4.68.5",
+          "manifests": [
+            "frontend/asset-processor/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "content-tag",
+          "from": "4.2.1",
+          "to": "4.3.0",
+          "manifests": [
+            "frontend/asset-processor/package.json",
+            "frontend/discourse/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "ember-cli",
+          "from": "7.3.0",
+          "to": "7.4.0",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "ember-qunit",
+          "from": "9.2.0",
+          "to": "9.2.1",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "playwright",
+          "from": "1.64.0",
+          "to": "1.65.1",
+          "manifests": [
+            "frontend/playwright-runner/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "postcss",
+          "from": "8.5.32",
+          "to": "8.5.33",
+          "manifests": [
+            "frontend/asset-processor/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "postcss-selector-parser",
+          "from": "7.1.8",
+          "to": "7.2.1",
+          "manifests": [
+            "package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "prosemirror-inputrules",
+          "from": "1.5.1",
+          "to": "1.6.0",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        },
+        {
+          "ecosystem": "npm",
+          "name": "prosemirror-transform",
+          "from": "1.12.5",
+          "to": "1.12.6",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-24T18:25:45Z",
+      "notes": "Also removes the ember-eslint-parser@0.16.0, ember-estree@0.9.0 and eslint-plugin-ember@13.8.0 entries from minimumReleaseAgeExclude."
     }
   ],
   "held": [

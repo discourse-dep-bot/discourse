@@ -9,8 +9,8 @@
       "number": 46817,
       "kind": "batch",
       "branch": "deps/batch-20261124-1822",
-      "base_sha": "4ef907b3b0754a25b094280960996ef6ec07956a",
-      "head_sha": "a76e48574ed575c9f202097805da5b7cd18fb3c7",
+      "base_sha": "1aa31fac831ceef626b212085fb94df882f92d82",
+      "head_sha": "95042adadaf89de903b72912ecb03ada19b9f3a4",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
@@ -73,7 +73,7 @@
         {
           "ecosystem": "gem",
           "name": "markbridge",
-          "from": "0.4.3",
+          "from": "0.5.0",
           "to": "0.5.1"
         },
         {
@@ -81,12 +81,6 @@
           "name": "omniauth",
           "from": "2.3.1",
           "to": "2.4.1"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "playwright-ruby-client",
-          "from": "1.64.0",
-          "to": "1.65.0"
         },
         {
           "ecosystem": "gem",
@@ -99,12 +93,6 @@
           "name": "rubocop",
           "from": "1.92.2",
           "to": "1.92.3"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "webmock",
-          "from": "3.29.0",
-          "to": "3.34.0"
         },
         {
           "ecosystem": "npm",
@@ -163,15 +151,6 @@
         },
         {
           "ecosystem": "npm",
-          "name": "playwright",
-          "from": "1.64.0",
-          "to": "1.65.1",
-          "manifests": [
-            "frontend/playwright-runner/package.json"
-          ]
-        },
-        {
-          "ecosystem": "npm",
           "name": "postcss",
           "from": "8.5.32",
           "to": "8.5.33",
@@ -208,19 +187,11 @@
         }
       ],
       "fixes": [],
-      "ci": {
-        "head_sha": "a76e48574ed575c9f202097805da5b7cd18fb3c7",
-        "result": "red",
-        "retries": 0,
-        "failing": [
-          "themes system: 328 of 328 failed",
-          "plugins (official) system: 832 of 832 failed"
-        ]
-      },
+      "ci": null,
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-24T18:25:45Z",
-      "notes": "Also removes the ember-eslint-parser@0.16.0, ember-estree@0.9.0 and eslint-plugin-ember@13.8.0 entries from minimumReleaseAgeExclude. Run 45459395335: every system test fails with \"Protocol error (Storage.clearDataForOrigin): * is not a valid URL\". spec/support/system/capybara_patches.rb#clear_storage sends origin \"*\", which the Chrome for Testing 159 that playwright 1.65.1 installs rejects. Once the Tests run finishes, hold playwright and playwright-ruby-client and rebuild."
+      "notes": "Also removes the ember-eslint-parser@0.16.0, ember-estree@0.9.0 and eslint-plugin-ember@13.8.0 entries from minimumReleaseAgeExclude."
     }
   ],
   "held": [

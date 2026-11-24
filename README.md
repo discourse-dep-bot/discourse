@@ -8,7 +8,7 @@ A run is in progress. Its lease expires at 2026-11-24T21:04:28Z.
 
 | PR | Kind | Status | CI | Updates | Notes |
 | --- | --- | --- | --- | --- | --- |
-| [#46817](https://github.com/discourse/discourse/pull/46817) | batch | draft | running | 23 | escalated 2026-11-24T18:52:47Z |
+| [#46817](https://github.com/discourse/discourse/pull/46817) | batch | ready | green | 23 | escalated 2026-11-24T18:52:47Z |
 
 ### [#46817](https://github.com/discourse/discourse/pull/46817) batch
 

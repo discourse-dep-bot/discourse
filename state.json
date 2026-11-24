@@ -6,112 +6,13 @@
   },
   "prs": [
     {
-      "number": 46759,
-      "kind": "alerts",
-      "branch": "deps/alerts-20261123-1705",
-      "base_sha": "2651acdbfbe5c2e07d6b935db420206b31e9c95f",
-      "head_sha": "1b97cc5fb9408ee6e3850b64bcc26ab36269d92f",
-      "status": "ready",
-      "replaces": null,
-      "ready_at": "2026-11-23T17:50:12Z",
-      "comments_seen_at": "2026-11-23T17:06:04Z",
-      "updates": [
-        {
-          "ecosystem": "gem",
-          "name": "puma",
-          "from": "8.1.1",
-          "to": "8.1.2"
-        }
-      ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "1b97cc5fb9408ee6e3850b64bcc26ab36269d92f",
-        "result": "green",
-        "retries": 0,
-        "failing": []
-      },
-      "bisect": null,
-      "escalated_at": null,
-      "opened_at": "2026-11-23T17:06:04Z"
-    },
-    {
-      "number": 46458,
-      "kind": "single",
-      "branch": "deps/cose-1.4.0",
-      "base_sha": "ed1a26fe07bbda10def833a470cb029796c35d7d",
-      "head_sha": "01d353d6fc4c30a183adbade5a1c22e5d37e7e0e",
-      "status": "ready",
-      "replaces": null,
-      "ready_at": "2026-11-18T14:44:16Z",
-      "comments_seen_at": "2026-11-18T13:32:46Z",
-      "updates": [
-        {
-          "ecosystem": "gem",
-          "name": "cose",
-          "from": "1.3.1",
-          "to": "1.4.0"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "cbor",
-          "from": "0.5.10.3",
-          "to": "0.6.2.2"
-        }
-      ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "01d353d6fc4c30a183adbade5a1c22e5d37e7e0e",
-        "result": "green",
-        "retries": 0,
-        "failing": []
-      },
-      "bisect": null,
-      "escalated_at": null,
-      "opened_at": "2026-11-18T13:32:46Z"
-    },
-    {
-      "number": 46475,
-      "kind": "batch",
-      "branch": "deps/batch-20261118-1630",
-      "base_sha": "2651acdbfbe5c2e07d6b935db420206b31e9c95f",
-      "head_sha": "dbf62a74ba5c7edccd0f7ab1d73119c9235c449e",
-      "status": "ready",
-      "replaces": null,
-      "ready_at": "2026-11-23T18:20:12Z",
-      "comments_seen_at": "2026-11-18T16:31:51Z",
-      "updates": [
-        {
-          "ecosystem": "gem",
-          "name": "markbridge",
-          "from": "0.4.3",
-          "to": "0.5.0"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "webmock",
-          "from": "3.29.0",
-          "to": "3.34.0"
-        }
-      ],
-      "fixes": [],
-      "ci": {
-        "head_sha": "dbf62a74ba5c7edccd0f7ab1d73119c9235c449e",
-        "result": "green",
-        "retries": 1,
-        "failing": []
-      },
-      "bisect": null,
-      "escalated_at": null,
-      "opened_at": "2026-11-18T16:31:51Z"
-    },
-    {
       "number": 46817,
       "kind": "batch",
       "branch": "deps/batch-20261124-1822",
       "base_sha": "4ef907b3b0754a25b094280960996ef6ec07956a",
       "head_sha": "a76e48574ed575c9f202097805da5b7cd18fb3c7",
       "status": "draft",
-      "replaces": 46475,
+      "replaces": null,
       "ready_at": null,
       "comments_seen_at": "2026-11-24T18:25:45Z",
       "updates": [
@@ -490,6 +391,22 @@
       "reason": "4.2.2 is the only release that fixes GHSA-pf75-2v58-7mxg and GHSA-vvhm-j6m8-64cw, and rack-protection 4 needs rack 3, which the Gemfile does not allow (rack < 3)",
       "since": "2026-11-23",
       "recheck_after": "2026-12-23"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "playwright",
+      "versions": ">= 1.65.0",
+      "reason": "Chrome for Testing 159, which playwright 1.65 installs, rejects origin \"*\" in the Storage.clearDataForOrigin call that clear_storage in spec/support/system/capybara_patches.rb sends, so every system test fails; a person needs to change clear_storage (found in #46817)",
+      "since": "2026-11-24",
+      "recheck_after": "2026-12-24"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "playwright-ruby-client",
+      "versions": ">= 1.65.0",
+      "reason": "Chrome for Testing 159, which playwright 1.65 installs, rejects origin \"*\" in the Storage.clearDataForOrigin call that clear_storage in spec/support/system/capybara_patches.rb sends, so every system test fails; a person needs to change clear_storage (found in #46817)",
+      "since": "2026-11-24",
+      "recheck_after": "2026-12-24"
     }
   ],
   "handed_over": []

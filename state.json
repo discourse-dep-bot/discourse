@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-24T18:34:29Z",
-    "expires_at": "2026-11-24T20:34:29Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46759,
@@ -307,11 +304,19 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "a76e48574ed575c9f202097805da5b7cd18fb3c7",
+        "result": "red",
+        "retries": 0,
+        "failing": [
+          "themes system: 328 of 328 failed",
+          "plugins (official) system: 832 of 832 failed"
+        ]
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-24T18:25:45Z",
-      "notes": "Also removes the ember-eslint-parser@0.16.0, ember-estree@0.9.0 and eslint-plugin-ember@13.8.0 entries from minimumReleaseAgeExclude."
+      "notes": "Also removes the ember-eslint-parser@0.16.0, ember-estree@0.9.0 and eslint-plugin-ember@13.8.0 entries from minimumReleaseAgeExclude. Run 45459395335: every system test fails with \"Protocol error (Storage.clearDataForOrigin): * is not a valid URL\". spec/support/system/capybara_patches.rb#clear_storage sends origin \"*\", which the Chrome for Testing 159 that playwright 1.65.1 installs rejects. Once the Tests run finishes, hold playwright and playwright-ruby-client and rebuild."
     }
   ],
   "held": [

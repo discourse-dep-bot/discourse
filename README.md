@@ -8,37 +8,10 @@ A run is in progress. Its lease expires at 2026-11-25T21:19:38Z.
 
 | PR | Kind | Status | CI | Updates | Notes |
 | --- | --- | --- | --- | --- | --- |
-| [#46817](https://github.com/discourse/discourse/pull/46817) | batch | ready | green | 23 | escalated 2026-11-24T18:52:47Z |
-| [#46882](https://github.com/discourse/discourse/pull/46882) | batch | ready | green | 27 | replaces [#46817](https://github.com/discourse/discourse/pull/46817) |
+| [#46882](https://github.com/discourse/discourse/pull/46882) | batch | ready | green | 27 |  |
 | [#46864](https://github.com/discourse/discourse/pull/46864) | single | ready | green | 1 |  |
 | [#46865](https://github.com/discourse/discourse/pull/46865) | single | ready | green | 1 |  |
 | [#46866](https://github.com/discourse/discourse/pull/46866) | single | ready | green | 1 |  |
-
-### [#46817](https://github.com/discourse/discourse/pull/46817) batch
-
-- `aws-partitions` 1.1304.0 → 1.1306.0 (gem)
-- `aws-sdk-bedrockruntime` 1.94.0 → 1.96.0 (gem)
-- `aws-sdk-core` 3.267.0 → 3.269.0 (gem)
-- `aws-sdk-kms` 1.142.0 → 1.144.0 (gem)
-- `aws-sdk-mediaconvert` 1.204.0 → 1.206.0 (gem)
-- `aws-sdk-s3` 1.241.0 → 1.243.0 (gem)
-- `aws-sdk-sns` 1.130.0 → 1.132.0 (gem)
-- `hashery` 2.1.2 → 2.2.0 (gem)
-- `lograge` 0.15.1 → 0.16.0 (gem)
-- `markbridge` 0.5.0 → 0.5.1 (gem)
-- `omniauth` 2.3.1 → 2.4.1 (gem)
-- `regexp_parser` 2.13.1 → 2.13.3 (gem)
-- `rubocop` 1.92.2 → 1.92.3 (gem)
-- `@codemirror/lint` 6.9.7 → 6.9.8 (npm)
-- `@csstools/postcss-light-dark-function` 3.0.8 → 3.0.9 (npm)
-- `@rollup/browser` 4.68.2 → 4.68.5 (npm)
-- `content-tag` 4.2.1 → 4.3.0 (npm)
-- `ember-cli` 7.3.0 → 7.4.0 (npm)
-- `ember-qunit` 9.2.0 → 9.2.1 (npm)
-- `postcss` 8.5.32 → 8.5.33 (npm)
-- `postcss-selector-parser` 7.1.8 → 7.2.1 (npm)
-- `prosemirror-inputrules` 1.5.1 → 1.6.0 (npm)
-- `prosemirror-transform` 1.12.5 → 1.12.6 (npm)
 
 ### [#46882](https://github.com/discourse/discourse/pull/46882) batch
 

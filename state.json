@@ -204,9 +204,9 @@
       "branch": "deps/stripe-21.0.0",
       "base_sha": "4c772a65fc873afe599c5ce88d43f0743c85339d",
       "head_sha": "91680d70f5111359374f2b05ef620a8c2a5b1b64",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-25T15:51:30Z",
       "comments_seen_at": "2026-11-25T15:23:30Z",
       "updates": [
         {
@@ -217,7 +217,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "91680d70f5111359374f2b05ef620a8c2a5b1b64",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-25T15:23:30Z"
@@ -228,9 +233,9 @@
       "branch": "deps/morphlex-2.0.0",
       "base_sha": "4c772a65fc873afe599c5ce88d43f0743c85339d",
       "head_sha": "718ab7292edc6a3b16e09c4d439bb96e392ae541",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-25T15:51:30Z",
       "comments_seen_at": "2026-11-25T15:25:27Z",
       "updates": [
         {
@@ -244,7 +249,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "718ab7292edc6a3b16e09c4d439bb96e392ae541",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-25T15:23:55Z"
@@ -255,9 +265,9 @@
       "branch": "deps/rolldown-1.2.19",
       "base_sha": "4c772a65fc873afe599c5ce88d43f0743c85339d",
       "head_sha": "9aef6a8ad28aa28441347144d0c55bde0510e2b2",
-      "status": "draft",
+      "status": "ready",
       "replaces": null,
-      "ready_at": null,
+      "ready_at": "2026-11-25T15:51:30Z",
       "comments_seen_at": "2026-11-25T15:24:30Z",
       "updates": [
         {
@@ -273,7 +283,12 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "9aef6a8ad28aa28441347144d0c55bde0510e2b2",
+        "result": "green",
+        "retries": 0,
+        "failing": []
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-25T15:24:30Z"

@@ -10,6 +10,7 @@ A run is in progress. Its lease expires at 2026-11-25T17:19:46Z.
 | --- | --- | --- | --- | --- | --- |
 | [#46817](https://github.com/discourse/discourse/pull/46817) | batch | ready | green | 23 | escalated 2026-11-24T18:52:47Z |
 | [#46864](https://github.com/discourse/discourse/pull/46864) | single | draft | running | 1 |  |
+| [#46865](https://github.com/discourse/discourse/pull/46865) | single | draft | running | 1 |  |
 
 ### [#46817](https://github.com/discourse/discourse/pull/46817) batch
 
@@ -40,6 +41,10 @@ A run is in progress. Its lease expires at 2026-11-25T17:19:46Z.
 ### [#46864](https://github.com/discourse/discourse/pull/46864) single
 
 - `stripe` 19.6.2 → 21.0.0 (gem)
+
+### [#46865](https://github.com/discourse/discourse/pull/46865) single
+
+- `morphlex` 1.4.0 → 2.0.0 (npm)
 
 ## Held
 

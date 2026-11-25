@@ -221,6 +221,33 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-25T15:23:30Z"
+    },
+    {
+      "number": 46865,
+      "kind": "single",
+      "branch": "deps/morphlex-2.0.0",
+      "base_sha": "4c772a65fc873afe599c5ce88d43f0743c85339d",
+      "head_sha": "718ab7292edc6a3b16e09c4d439bb96e392ae541",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-25T15:23:55Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "morphlex",
+          "from": "1.4.0",
+          "to": "2.0.0",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-25T15:23:55Z"
     }
   ],
   "held": [

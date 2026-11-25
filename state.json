@@ -197,6 +197,30 @@
       "escalated_at": "2026-11-24T18:52:47Z",
       "opened_at": "2026-11-24T18:25:45Z",
       "notes": "Also removes the ember-eslint-parser@0.16.0, ember-estree@0.9.0 and eslint-plugin-ember@13.8.0 entries from minimumReleaseAgeExclude."
+    },
+    {
+      "number": 46864,
+      "kind": "single",
+      "branch": "deps/stripe-21.0.0",
+      "base_sha": "4c772a65fc873afe599c5ce88d43f0743c85339d",
+      "head_sha": "91680d70f5111359374f2b05ef620a8c2a5b1b64",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-25T15:23:30Z",
+      "updates": [
+        {
+          "ecosystem": "gem",
+          "name": "stripe",
+          "from": "19.6.2",
+          "to": "21.0.0"
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-25T15:23:30Z"
     }
   ],
   "held": [

@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-27T14:42:32Z",
-    "expires_at": "2026-11-27T16:42:32Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46866,
@@ -246,6 +243,33 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-27T14:48:32Z"
+    },
+    {
+      "number": 46981,
+      "kind": "single",
+      "branch": "deps/message-bus-client-5.1.0",
+      "base_sha": "4f4ae8668c56337f32ce2b4eb523ea14575a3d5b",
+      "head_sha": "dffebcc29c05128eb72b470bdeed40fe399fc591",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-27T14:49:13Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "message-bus-client",
+          "from": "4.6.0",
+          "to": "5.1.0",
+          "manifests": [
+            "frontend/discourse/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-27T14:49:13Z"
     }
   ],
   "held": [

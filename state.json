@@ -1,9 +1,6 @@
 {
   "version": 1,
-  "lease": {
-    "run_id": "2026-11-27T18:12:57Z",
-    "expires_at": "2026-11-27T20:12:57Z"
-  },
+  "lease": null,
   "prs": [
     {
       "number": 46991,
@@ -38,6 +35,33 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-27T17:14:09Z"
+    },
+    {
+      "number": 46997,
+      "kind": "batch",
+      "branch": "deps/batch-20261127-1815",
+      "base_sha": "8a70e6572fb2b12a87bf590ec96ed307d5a9f609",
+      "head_sha": "b07f5aa18d70d551cbb076927cc5be5b4a53fc16",
+      "status": "draft",
+      "replaces": null,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-27T18:16:14Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "terser",
+          "from": "5.51.3",
+          "to": "5.51.4",
+          "manifests": [
+            "frontend/asset-processor/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-27T18:16:14Z"
     }
   ],
   "held": [

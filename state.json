@@ -213,7 +213,34 @@
         }
       ],
       "fixes": [],
-      "ci": null,
+      "ci": {
+        "head_sha": "daebf0816d7f87e20080e1bfa357d73d351490d8",
+        "result": "red",
+        "retries": 0,
+        "failing": [
+          "./plugins/discourse-translator/spec/services/amazon_spec.rb:70",
+          "./plugins/discourse-translator/spec/services/amazon_spec.rb:56",
+          "./plugins/discourse-translator/spec/services/amazon_spec.rb:84",
+          "./plugins/discourse-translator/spec/services/amazon_spec.rb:26",
+          "./plugins/discourse-translator/spec/services/amazon_spec.rb:125",
+          "./plugins/discourse-translator/spec/services/amazon_spec.rb:107",
+          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:51",
+          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:29",
+          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:33",
+          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:25",
+          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:41",
+          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:481",
+          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:474",
+          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:494",
+          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:397",
+          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:404",
+          "./spec/lib/upload_creator_spec.rb:840",
+          "./spec/lib/upload_creator_spec.rb:833",
+          "./spec/lib/upload_creator_spec.rb:847",
+          "./spec/lib/upload_creator_spec.rb:881",
+          "... and 163 more"
+        ]
+      },
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-27T14:48:32Z"
@@ -443,6 +470,54 @@
       "reason": "Vite 8.3.8 and earlier depend on rolldown ~1.2, and the rolldown 1.3.0 release notes ask Vite users to wait for a Vite release that supports 1.3; Discourse keeps its own rolldown on the version Vite uses",
       "since": "2026-11-25",
       "recheck_after": "2026-12-09"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "aws-sdk-core",
+      "versions": ">= 3.270.0",
+      "reason": "3.270.0 replaces the configuration Struct with an object that uses method_missing, so Mocha's Object#stubs shadows config.stubs, and every spec that stubs an AWS client fails with \"wrong number of arguments (given 0, expected 1)\" in Aws::ClientStubs (about 180 specs, found in #46980); a person needs to work around it in the specs",
+      "since": "2026-11-27",
+      "recheck_after": "2026-12-27"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "aws-sdk-kms",
+      "versions": ">= 1.145.0",
+      "reason": "needs aws-sdk-core >= 3.270.0, which is held",
+      "since": "2026-11-27",
+      "recheck_after": "2026-12-27"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "aws-sdk-sns",
+      "versions": ">= 1.133.0",
+      "reason": "needs aws-sdk-core >= 3.270.0, which is held",
+      "since": "2026-11-27",
+      "recheck_after": "2026-12-27"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "aws-sdk-mediaconvert",
+      "versions": ">= 1.207.0",
+      "reason": "needs aws-sdk-core >= 3.270.0, which is held",
+      "since": "2026-11-27",
+      "recheck_after": "2026-12-27"
+    },
+    {
+      "ecosystem": "gem",
+      "name": "aws-sdk-bedrockruntime",
+      "versions": ">= 1.97.0",
+      "reason": "needs aws-sdk-core >= 3.270.0, which is held",
+      "since": "2026-11-27",
+      "recheck_after": "2026-12-27"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "prosemirror-markdown",
+      "versions": ">= 1.14.0",
+      "reason": "1.14.0 changes how the serializer builds its output, and a table inside a blockquote loses the \"> \" prefix on every other line, so the prosemirror-editor \"table within quotes\" test fails (found in #46980)",
+      "since": "2026-11-27",
+      "recheck_after": "2026-12-27"
     }
   ],
   "handed_over": []

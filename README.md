@@ -8,48 +8,7 @@ A run is in progress. Its lease expires at 2026-11-27T16:42:32Z.
 
 | PR | Kind | Status | CI | Updates | Notes |
 | --- | --- | --- | --- | --- | --- |
-| [#46882](https://github.com/discourse/discourse/pull/46882) | batch | ready | green | 27 |  |
-| [#46864](https://github.com/discourse/discourse/pull/46864) | single | ready | green | 1 |  |
-| [#46865](https://github.com/discourse/discourse/pull/46865) | single | ready | green | 1 |  |
 | [#46866](https://github.com/discourse/discourse/pull/46866) | single | ready | green | 1 |  |
-
-### [#46882](https://github.com/discourse/discourse/pull/46882) batch
-
-- `aws-partitions` 1.1304.0 → 1.1307.0 (gem)
-- `aws-sdk-bedrockruntime` 1.94.0 → 1.96.0 (gem)
-- `aws-sdk-core` 3.267.0 → 3.269.0 (gem)
-- `aws-sdk-kms` 1.142.0 → 1.144.0 (gem)
-- `aws-sdk-mediaconvert` 1.204.0 → 1.206.0 (gem)
-- `aws-sdk-s3` 1.241.0 → 1.244.0 (gem)
-- `aws-sdk-sns` 1.130.0 → 1.132.0 (gem)
-- `hashery` 2.1.2 → 2.2.2 (gem)
-- `lograge` 0.15.1 → 0.16.0 (gem)
-- `markbridge` 0.5.0 → 0.5.1 (gem)
-- `omniauth` 2.3.1 → 2.4.2 (gem)
-- `regexp_parser` 2.13.1 → 2.13.4 (gem)
-- `rubocop` 1.92.2 → 1.92.3 (gem)
-- `rubocop-ast` 1.51.0 → 1.52.0 (gem)
-- `webmock` 3.34.0 → 3.35.0 (gem)
-- `@codemirror/lint` 6.9.7 → 6.9.8 (npm)
-- `@csstools/postcss-light-dark-function` 3.0.8 → 3.0.9 (npm)
-- `@rollup/browser` 4.68.2 → 4.68.7 (npm)
-- `content-tag` 4.2.1 → 4.3.0 (npm)
-- `ember-cli` 7.3.0 → 7.4.0 (npm)
-- `ember-qunit` 9.2.0 → 9.2.1 (npm)
-- `jquery` 4.0.0 → 4.1.0 (npm)
-- `postcss` 8.5.32 → 8.5.33 (npm)
-- `postcss-selector-parser` 7.1.8 → 7.2.1 (npm)
-- `prosemirror-inputrules` 1.5.1 → 1.6.0 (npm)
-- `prosemirror-transform` 1.12.5 → 1.12.6 (npm)
-- `vitest` 5.1.0 → 5.1.1 (npm)
-
-### [#46864](https://github.com/discourse/discourse/pull/46864) single
-
-- `stripe` 19.6.2 → 21.0.0 (gem)
-
-### [#46865](https://github.com/discourse/discourse/pull/46865) single
-
-- `morphlex` 1.4.0 → 2.0.0 (npm)
 
 ### [#46866](https://github.com/discourse/discourse/pull/46866) single
 
@@ -86,9 +45,6 @@ A run is in progress. Its lease expires at 2026-11-27T16:42:32Z.
 
 ## Latest activity
 
-### 2026-11-26T10:35:09Z
+### 2026-11-27T14:42:50Z
 
-No changes. #46882 (batch), #46864 (stripe), #46865 (morphlex) and #46866 (rolldown) are ready, mergeable and have no new comments or reviews. #46882 has been ready for about 15 hours, so it is not yet due to be replaced.
-
-- No new `alerts` PR. The open advisories are `rack-protection`, `glob` and `minimatch`, which are held.
-- No new `single` PR, because three are already open.
+Removed #46882 (batch), #46864 (stripe 21.0.0) and #46865 (morphlex 2.0.0), which were merged.

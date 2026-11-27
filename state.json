@@ -43,12 +43,12 @@
       "number": 46980,
       "kind": "batch",
       "branch": "deps/batch-20261127-1447",
-      "base_sha": "4f4ae8668c56337f32ce2b4eb523ea14575a3d5b",
-      "head_sha": "daebf0816d7f87e20080e1bfa357d73d351490d8",
+      "base_sha": "d066e4adb6ba390b38ec7925c53c1c617282548b",
+      "head_sha": "30ef9bbcbc88cec1c1d1a67d1eafc16e8af85e86",
       "status": "draft",
       "replaces": null,
       "ready_at": null,
-      "comments_seen_at": "2026-11-27T14:48:32Z",
+      "comments_seen_at": "2026-11-27T15:10:24Z",
       "updates": [
         {
           "ecosystem": "gem",
@@ -58,39 +58,9 @@
         },
         {
           "ecosystem": "gem",
-          "name": "aws-sdk-bedrockruntime",
-          "from": "1.96.0",
-          "to": "1.97.0"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "aws-sdk-core",
-          "from": "3.269.0",
-          "to": "3.271.0"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "aws-sdk-kms",
-          "from": "1.144.0",
-          "to": "1.145.0"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "aws-sdk-mediaconvert",
-          "from": "1.206.0",
-          "to": "1.207.0"
-        },
-        {
-          "ecosystem": "gem",
           "name": "aws-sdk-s3",
           "from": "1.244.0",
           "to": "1.245.0"
-        },
-        {
-          "ecosystem": "gem",
-          "name": "aws-sdk-sns",
-          "from": "1.132.0",
-          "to": "1.133.0"
         },
         {
           "ecosystem": "gem",
@@ -166,15 +136,6 @@
         },
         {
           "ecosystem": "npm",
-          "name": "prosemirror-markdown",
-          "from": "1.13.9",
-          "to": "1.14.0",
-          "manifests": [
-            "frontend/discourse/package.json"
-          ]
-        },
-        {
-          "ecosystem": "npm",
           "name": "prosemirror-schema-list",
           "from": "1.6.0",
           "to": "1.6.1",
@@ -213,34 +174,7 @@
         }
       ],
       "fixes": [],
-      "ci": {
-        "head_sha": "daebf0816d7f87e20080e1bfa357d73d351490d8",
-        "result": "red",
-        "retries": 0,
-        "failing": [
-          "./plugins/discourse-translator/spec/services/amazon_spec.rb:70",
-          "./plugins/discourse-translator/spec/services/amazon_spec.rb:56",
-          "./plugins/discourse-translator/spec/services/amazon_spec.rb:84",
-          "./plugins/discourse-translator/spec/services/amazon_spec.rb:26",
-          "./plugins/discourse-translator/spec/services/amazon_spec.rb:125",
-          "./plugins/discourse-translator/spec/services/amazon_spec.rb:107",
-          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:51",
-          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:29",
-          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:33",
-          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:25",
-          "./plugins/discourse-translator/spec/jobs/detect_translatable_language_spec.rb:41",
-          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:481",
-          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:474",
-          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:494",
-          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:397",
-          "./plugins/discourse-ai/spec/requests/ai_bot/shared_ai_conversations_controller_spec.rb:404",
-          "./spec/lib/upload_creator_spec.rb:840",
-          "./spec/lib/upload_creator_spec.rb:833",
-          "./spec/lib/upload_creator_spec.rb:847",
-          "./spec/lib/upload_creator_spec.rb:881",
-          "... and 163 more"
-        ]
-      },
+      "ci": null,
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-27T14:48:32Z"

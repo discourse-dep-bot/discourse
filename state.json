@@ -38,6 +38,35 @@
       "bisect": null,
       "escalated_at": null,
       "opened_at": "2026-11-27T14:44:19Z"
+    },
+    {
+      "number": 46991,
+      "kind": "single",
+      "branch": "deps/rolldown-1.2.19-20261127-1713",
+      "base_sha": "687428045b4633c0b005d12307e2b7ef2560847f",
+      "head_sha": "4903fde735685fa39223e8631e231fd29e6ab0b4",
+      "status": "draft",
+      "replaces": 46979,
+      "ready_at": null,
+      "comments_seen_at": "2026-11-27T17:14:09Z",
+      "updates": [
+        {
+          "ecosystem": "npm",
+          "name": "rolldown",
+          "from": "1.2.7",
+          "to": "1.2.19",
+          "manifests": [
+            "frontend/asset-processor/package.json",
+            "frontend/discourse/package.json",
+            "frontend/pretty-text-processor/package.json"
+          ]
+        }
+      ],
+      "fixes": [],
+      "ci": null,
+      "bisect": null,
+      "escalated_at": null,
+      "opened_at": "2026-11-27T17:14:09Z"
     }
   ],
   "held": [

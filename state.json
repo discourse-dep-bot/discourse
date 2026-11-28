@@ -1,6 +1,9 @@
 {
   "version": 1,
-  "lease": null,
+  "lease": {
+    "run_id": "2026-11-28T03:57:42Z",
+    "expires_at": "2026-11-28T05:57:45Z"
+  },
   "prs": [
     {
       "number": 46991,
